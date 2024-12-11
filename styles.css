@@ -1,4 +1,8 @@
 @charset "UTF-8";
+main {
+  z-index: 1;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -109,6 +113,8 @@ header .header_contactsBlock .contactsBlock_content .communicationMethod_socialM
 header .header_contactsBlock .contactsBlock_content .communicationMethod_socialMedia .socialMedia_variants img {
   width: 40px;
   cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 header .navigationBlock {
   width: 100%;
@@ -147,6 +153,21 @@ header .navigationBlock .navigationBlock_content .navigateBlock_pageNavigation a
 header .navigationBlock .navigationBlock_content .navigateBlock_pageNavigation a:hover {
   color: #f9552d;
 }
+header .navigationBlock .navigationBlock_content .navigateBlock_menuBurger {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+  height: 90%;
+}
+header .navigationBlock .navigationBlock_content .navigateBlock_menuBurger span {
+  width: 100%;
+  height: 2.5px;
+  background-color: white;
+  margin-bottom: 10px;
+}
 
 main {
   width: 100%;
@@ -160,20 +181,25 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 0px;
           flex: 1 0 0;
-  min-height: 100vh;
 }
 main .main_presentBlock {
   position: relative;
-  background-image: url("./imgs/presentPhoto.jpg");
-  background-size: cover;
   width: 100%;
   height: 670px;
   min-height: 250px;
+}
+main .main_presentBlock img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .main_presentBlock .presentBlock_textPart {
   position: absolute;
   top: 12%;
   left: 10%;
+  width: 25%;
+  min-width: 300px;
 }
 main .main_presentBlock .presentBlock_textPart .textPart_title h1 {
   font-size: calc(43px + 1.4121338912vw);
@@ -192,12 +218,10 @@ main .main_presentBlock .presentBlock_textPart .textPart_title p span {
 }
 main .main_presentBlock .presentBlock_textPart p {
   margin-bottom: 40px;
-  font-size: calc(21px + 0.2615062762vw);
+  font-size: calc(20px + 0.2092050209vw);
   color: white;
   text-transform: uppercase;
-  width: 500px;
   max-width: 600px;
-  min-width: 300px;
   line-height: 45px;
 }
 main .main_aboutUs {
@@ -310,18 +334,6 @@ main .main_ourTrainers h2 {
   margin-bottom: 50px;
   position: relative;
 }
-main .main_ourTrainers h2::before {
-  content: "";
-  content: "";
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  bottom: -9px;
-  width: 70%;
-  height: 4px;
-  background-color: #f9552d;
-}
 main .main_ourTrainers .ourTrainers_listCard {
   display: -ms-grid;
   display: grid;
@@ -372,7 +384,7 @@ main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_textPart h3 {
   padding: 0;
   text-align: center;
   font-size: calc(23px + 0.3661087866vw);
-  color: #1a1a1a;
+  color: #4d0000;
   font-weight: 600;
   line-height: 1.2;
   overflow: hidden;
@@ -434,14 +446,11 @@ main .main_ourCourses {
       -ms-flex-align: center;
           align-items: center;
   background-size: cover;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding: 60px 0;
+  margin: 0 auto;
 }
 main .main_ourCourses .ourCourses_textPart {
   width: 100%;
-  margin: 0 auto;
   text-align: center;
 }
 main .main_ourCourses .ourCourses_textPart h2 {
@@ -451,29 +460,14 @@ main .main_ourCourses .ourCourses_textPart h2 {
   margin-bottom: 13px;
   position: relative;
 }
-main .main_ourCourses .ourCourses_textPart h2::before {
-  content: "";
-  content: "";
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  bottom: -9px;
-  width: 18%;
-  height: 4px;
-  background-color: #f9552d;
-}
-main .main_ourCourses .ourCourses_textPart p {
-  font-size: calc(24px + 0.4184100418vw);
-  color: white;
-}
 main .main_ourCourses .ourCourses_listCourse {
-  width: 88%;
+  width: 83%;
   height: auto;
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
-  gap: 20px;
+  justify-items: center;
+  gap: 30px;
   margin: 40px auto;
 }
 main .main_ourCourses .ourCourses_listCourse .listCourse_elem {
@@ -500,22 +494,9 @@ main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_nameCourse {
 }
 main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_nameCourse h2 {
   font-size: calc(23px + 0.3661087866vw);
-  color: #1a1a1a;
-  position: relative;
+  color: #4d0000;
   font-weight: 600;
   text-align: center;
-}
-main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_nameCourse h2::before {
-  content: "";
-  content: "";
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  bottom: -9px;
-  width: 80%;
-  height: 4px;
-  background-color: #1a1a1a;
 }
 main .main_ourCourses .ourCourses_listCourse .listCourse_elem img {
   width: 100%;
@@ -565,26 +546,13 @@ main .main_ourCourses .ourCourses_listCourse .listCourse_elem:hover .elem_aboutC
 main .main_passes {
   width: 90%;
   height: auto;
-  margin: 50px auto;
+  margin: 65px auto 90px auto;
 }
 main .main_passes h2 {
   font-size: calc(37px + 1.0460251046vw);
   color: #1a1a1a;
   text-align: center;
   font-weight: 600;
-  position: relative;
-}
-main .main_passes h2::before {
-  content: "";
-  content: "";
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  bottom: -9px;
-  width: 12%;
-  height: 4px;
-  background-color: #f9552d;
 }
 main .main_passes .passes_seasonTicketList {
   width: 100%;
@@ -605,10 +573,11 @@ main .main_passes .passes_seasonTicketList .seasonTicketList_card {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border: 5px solid #1a1a1a;
+  min-height: 400px;
 }
 main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_name {
   width: 100%;
@@ -621,6 +590,9 @@ main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_name {
 }
 main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_textPart {
   padding: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_textPart p {
   font-size: calc(21px + 0.2615062762vw);
@@ -642,7 +614,7 @@ main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_buttonDe
   width: 70%;
   min-width: 150px;
   border: 2px solid #f9552d;
-  margin: 5px 0 30px 0;
+  margin: 0px auto 20px auto;
   position: relative;
   display: block;
   -webkit-box-sizing: border-box;
@@ -755,18 +727,6 @@ main .main_contactsAndschedule h2 {
   font-weight: 600;
   position: relative;
 }
-main .main_contactsAndschedule h2::before {
-  content: "";
-  content: "";
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  bottom: -9px;
-  width: 70%;
-  height: 4px;
-  background-color: #f9552d;
-}
 main .main_contactsAndschedule .contactsAndschedule_content {
   width: 100%;
   display: -webkit-box;
@@ -823,6 +783,18 @@ main .main_contactsAndschedule .contactsAndschedule_content iframe {
   width: 50%;
   height: 350px;
 }
+main .main_scrollTop {
+  background-color: #34323a;
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 4px;
+  position: fixed;
+  left: 93%;
+  top: 83%;
+  -webkit-box-shadow: 2px 2px 7px #1a1a1a;
+          box-shadow: 2px 2px 7px #1a1a1a;
+}
 
 footer {
   width: 100%;
@@ -857,4 +829,18 @@ footer .footer_content .content_listPageNavigation li a {
 }
 footer .footer_content .content_listPageNavigation li a:hover {
   color: #f9552d;
+}
+
+@media (max-width: 320px) {
+  header .header_contactsBlock {
+    display: none;
+  }
+  header .navigationBlock .navigationBlock_content .navigateBlock_pageNavigation {
+    display: none;
+  }
+  header .navigationBlock .navigationBlock_content .navigateBlock_menuBurger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }

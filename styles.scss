@@ -16,6 +16,10 @@ $fontSzForH2: calc(37px + 20 * (100vw / 1912));
   background-color: $color;
 }
 
+main {
+  z-index: 1;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -96,6 +100,7 @@ header {
           img {
             width: 40px;
             cursor: pointer;
+            transition: all 0.4s;
           }
         }
       }
@@ -130,6 +135,19 @@ header {
           }
         }
       }
+
+      .navigateBlock_menuBurger {
+        display: none;
+        flex-direction: column;
+        width: 20%;
+        height: 90%;
+        span {
+          width: 100%;
+          height: 2.5px;
+          background-color: white;
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 }
@@ -139,18 +157,24 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1 0 0;
-  min-height: 100vh;
   .main_presentBlock {
     position: relative;
-    background-image: url("./imgs/presentPhoto.jpg");
-    background-size: cover;
     width: 100%;
     height: 670px;
     min-height: 250px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .presentBlock_textPart {
       position: absolute;
       top: 12%;
       left: 10%;
+      width: 25%;
+      min-width: 300px;
       .textPart_title {
         h1 {
           font-size: calc(43px + 27 * (100vw / 1912));
@@ -170,12 +194,10 @@ main {
       }
       p {
         margin-bottom: 40px;
-        font-size: calc(21px + 5 * (100vw / 1912));
+        font-size: calc(20px + 4 * (100vw / 1912));
         color: white;
         text-transform: uppercase;
-        width: 500px;
         max-width: 600px;
-        min-width: 300px;
         line-height: 45px;
       }
     }
@@ -263,11 +285,6 @@ main {
       font-weight: 600;
       margin-bottom: 50px;
       position: relative;
-
-      &::before {
-        content: "";
-        @include before-style(#f9552d);
-      }
     }
 
     .ourTrainers_listCard {
@@ -307,7 +324,7 @@ main {
             padding: 0;
             text-align: center;
             font-size: calc(23px + 7 * (100vw / 1912));
-            color: #1a1a1a;
+            color: #4d0000;
             font-weight: 600;
             line-height: 1.2;
             overflow: hidden;
@@ -377,12 +394,11 @@ main {
     flex-direction: column;
     align-items: center;
     background-size: cover;
-    justify-content: center;
     padding: 60px 0;
+    margin: 0 auto;
 
     .ourCourses_textPart {
       width: 100%;
-      margin: 0 auto;
       text-align: center;
 
       h2 {
@@ -391,24 +407,16 @@ main {
         color: white;
         margin-bottom: 13px;
         position: relative;
-
-        &::before {
-          content: "";
-          @include before-style(#f9552d, 18%);
-        }
-      }
-      p {
-        font-size: calc(24px + 8 * (100vw / 1912));
-        color: white;
       }
     }
 
     .ourCourses_listCourse {
-      width: 88%;
+      width: 83%;
       height: auto;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
-      gap: 20px;
+      justify-items: center;
+      gap: 30px;
       margin: 40px auto;
 
       .listCourse_elem {
@@ -429,15 +437,9 @@ main {
 
           h2 {
             font-size: calc(23px + 7 * (100vw / 1912));
-            color: #1a1a1a;
-            position: relative;
+            color: #4d0000;
             font-weight: 600;
             text-align: center;
-
-            &::before {
-              content: "";
-              @include before-style(#1a1a1a, 80%);
-            }
           }
         }
         img {
@@ -488,17 +490,12 @@ main {
   .main_passes {
     width: 90%;
     height: auto;
-    margin: 50px auto;
+    margin: 65px auto 90px auto;
     h2 {
       font-size: $fontSzForH2;
       color: #1a1a1a;
       text-align: center;
       font-weight: 600;
-      position: relative;
-      &::before {
-        content: "";
-        @include before-style(#f9552d, 12%);
-      }
     }
 
     .passes_seasonTicketList {
@@ -514,8 +511,10 @@ main {
         border-radius: 3px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
         border: 5px solid #1a1a1a;
+        min-height: 400px;
+
         .card_name {
           width: 100%;
           background-color: #f9552d;
@@ -525,8 +524,10 @@ main {
           text-align: center;
           padding: 20px 0;
         }
+
         .card_textPart {
           padding: 20px;
+          flex-grow: 1;
           p {
             font-size: calc(21px + 5 * (100vw / 1912));
             color: #1a1a1a;
@@ -549,7 +550,7 @@ main {
           width: 70%;
           min-width: 150px;
           border: 2px solid #f9552d;
-          margin: 5px 0 30px 0;
+          margin: 0px auto 20px auto;
           position: relative;
           display: block;
           box-sizing: border-box;
@@ -565,7 +566,6 @@ main {
           &:hover {
             span {
               transform: translateY(-100%);
-
               &::before {
                 content: attr(data-text);
                 position: absolute;
@@ -657,10 +657,6 @@ main {
       margin-bottom: 20px;
       font-weight: 600;
       position: relative;
-      &::before {
-        content: "";
-        @include before-style(#f9552d);
-      }
     }
 
     .contactsAndschedule_content {
@@ -713,6 +709,18 @@ main {
       }
     }
   }
+
+  .main_scrollTop {
+    background-color: #34323a;
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 4px;
+    position: fixed;
+    left: 93%;
+    top: 83%;
+    box-shadow: 2px 2px 7px #1a1a1a;
+  }
 }
 
 footer {
@@ -743,6 +751,24 @@ footer {
           &:hover {
             color: #f9552d;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  header {
+    .header_contactsBlock {
+      display: none;
+    }
+    .navigationBlock {
+      .navigationBlock_content {
+        .navigateBlock_pageNavigation {
+          display: none;
+        }
+        .navigateBlock_menuBurger {
+          display: flex;
         }
       }
     }
