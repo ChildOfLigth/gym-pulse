@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="nullifyingStyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>GymPulse</title>
   </head>
   <body>
@@ -48,8 +54,11 @@
     <main>
       <div class="main_presentBlock">
         <picture>
-          <source srcset="imgs/presentPhotoForSmallScreenSizes.webp" media="(max-width: 500px)"/>
-          <img src="imgs/presentPhoto.jpg" alt="">
+          <source
+            srcset="imgs/presentPhotoForSmallScreenSizes.webp"
+            media="(max-width: 500px)"
+          />
+          <img src="imgs/presentPhoto.jpg" alt="" />
         </picture>
         <div class="presentBlock_textPart">
           <div class="textPart_title">
@@ -86,110 +95,6 @@
 
       <div class="main_ourTrainers" id="main_ourTrainers">
         <h2>Наши профессионалы</h2>
-        <div class="ourTrainers_listCard">
-          <div class="listCard_card">
-            <img src="imgs/trainerAlex.webp" alt="" />
-            <div class="card_textPart">
-              <h3>Яремчук Алекс</h3>
-            </div>
-
-            <div class="card_aboutTheCoach">
-              <div class="aboutTheCoach_textPart">
-                <p>
-                  <span>Алекс</span> — тренер с богатым восьмилетним опытом,
-                  который поможет вам достичь максимальных результатов и освоить
-                  сложные тренировочные методики.
-                </p>
-                <p>Стаж работы: 8 лет</p>
-
-                <ul>
-                  <h4>Специалист по:</h4>
-                  <li>Боксу,</li>
-                  <li>Тяжелой атлетике,</li>
-                  <li>Кроссфиту,</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="listCard_card">
-            <img src="imgs/treinerСофия.webp" alt="" />
-            <div class="card_textPart">
-              <h3>Войчик София</h3>
-            </div>
-
-            <div class="card_aboutTheCoach">
-              <div class="aboutTheCoach_textPart">
-                <p>
-                  <span>София</span> — опытный и разносторонний тренер, который
-                  помогает своим клиентам достигать результатов и раскрывать
-                  потенциал. Она специализируется на:
-                </p>
-                <p>Стаж работы: 6 лет</p>
-
-                <ul>
-                  <h4>Специалист по:</h4>
-                  <li>Индивидуальным тренировкам,</li>
-                  <li>Кроссфиту,</li>
-                  <li>Стретчингу,</li>
-                  <li>Боксу,</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="listCard_card">
-            <img src="imgs/trainerНиколь.webp" alt="" />
-            <div class="card_textPart">
-              <h3>Сидорченко Николь</h3>
-            </div>
-
-            <div class="card_aboutTheCoach">
-              <div class="aboutTheCoach_textPart">
-                <p>
-                  <span>Николь</span> — профессиональный тренер с шестилетним
-                  опытом, который помогает клиентам достигать гармонии между
-                  телом и духом.
-                </p>
-                <p>Стаж работы: 6 лет</p>
-
-                <ul>
-                  <h4>Специалист по:</h4>
-                  <li>Индивидуальным тренировкам,</li>
-                  <li>Кроссфиту,</li>
-                  <li>Стретчингу,</li>
-                  <li>Груповым тренировкам,</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="listCard_card">
-            <img src="imgs/trainerArtemii.jpg" alt="" />
-            <div class="card_textPart">
-              <h3>Чернов Артемий</h3>
-            </div>
-
-            <div class="card_aboutTheCoach">
-              <div class="aboutTheCoach_textPart">
-                <p>
-                  <span>Артемий</span> — опытный и вдохновляющий тренер, который
-                  уже 7 лет помогает своим клиентам становиться сильнее, гибче и
-                  увереннее в себе.
-                </p>
-                <p>Стаж работы: 7 лет</p>
-
-                <ul>
-                  <h4>Специалист по:</h4>
-                  <li>Индивидуальным тренировкам,</li>
-                  <li>Стретчингу,</li>
-                  <li>Груповым тренировкам,</li>
-                  <li>Боксу,</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div
@@ -333,9 +238,9 @@
                 профессионал, что бы помочь со всем разобраться
               </p>
             </div>
-            <button class="card_buttonDetails">
+            <a class="card_buttonDetails">
               <span data-text="Подробнее">Подробнее</span>
-            </button>
+            </a>
 
             <ul class="card_modalWindWithFeatureList">
               <button class="closeModalWindow">
@@ -362,9 +267,9 @@
                 тренировках
               </p>
             </div>
-            <button class="card_buttonDetails">
+            <a class="card_buttonDetails">
               <span data-text="Подробнее">Подробнее</span>
-            </button>
+            </a>
 
             <ul class="card_modalWindWithFeatureList">
               <button class="closeModalWindow">
@@ -394,9 +299,9 @@
                 время, без жесткой привязки к расписанию
               </p>
             </div>
-            <button class="card_buttonDetails">
+            <a class="card_buttonDetails">
               <span data-text="Подробнее">Подробнее</span>
-            </button>
+            </a>
 
             <ul class="card_modalWindWithFeatureList">
               <button class="closeModalWindow">
@@ -421,9 +326,9 @@
                 ограничений и с полным комфортом
               </p>
             </div>
-            <button class="card_buttonDetails">
+            <a class="card_buttonDetails">
               <span data-text="Подробнее">Подробнее</span>
-            </button>
+            </a>
 
             <ul class="card_modalWindWithFeatureList">
               <button class="closeModalWindow">
@@ -471,7 +376,9 @@
         </div>
       </div>
 
-      <button class="main_scrollTop"><img src="imgs/up-arrow.png" alt=""></button>
+      <button class="main_scrollTop">
+        <img src="imgs/up-arrow.png" alt="" />
+      </button>
     </main>
 
     <footer>
@@ -484,43 +391,6 @@
         </ul>
       </div>
     </footer>
-
-    <script>
-      const seasonTicketCard = document.querySelectorAll(
-        ".seasonTicketList_card"
-      );
-
-      let currentlyOpenModal = null;
-
-      seasonTicketCard.forEach((card) => {
-        const modalWindowWithFeatureList = card.querySelector(
-          ".card_modalWindWithFeatureList"
-        );
-
-        const buttonDetails = card.querySelector(".card_buttonDetails");
-        const closeModalWindow = card.querySelector(".closeModalWindow");
-
-        buttonDetails.onclick = () => {
-          if (
-            currentlyOpenModal &&
-            currentlyOpenModal !== modalWindowWithFeatureList
-          ) {
-            currentlyOpenModal.style.display = "none";
-          }
-
-          if (modalWindowWithFeatureList.style.display === "block") {
-            modalWindowWithFeatureList.style.display = "none";
-            currentlyOpenModal = null;
-          } else {
-            modalWindowWithFeatureList.style.display = "block";
-            currentlyOpenModal = modalWindowWithFeatureList;
-          }
-        };
-
-        closeModalWindow.onclick = () => {
-          modalWindowWithFeatureList.style.display = "none";
-        };
-      });
-    </script>
+    <script src="functionalWeb.js" defer></script>
   </body>
 </html>

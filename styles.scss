@@ -82,7 +82,7 @@ header {
         flex-direction: row;
         align-items: center;
         width: 14%;
-        max-width: 225px;
+        max-width: 250px;
         min-width: 193px;
         justify-content: space-between;
 
@@ -139,8 +139,13 @@ header {
       .navigateBlock_menuBurger {
         display: none;
         flex-direction: column;
-        width: 20%;
-        height: 90%;
+        justify-content: space-between;
+        align-items: center;
+        width: 70px;
+        height: 100%;
+        position: relative;
+        top: 50%;
+
         span {
           width: 100%;
           height: 2.5px;
@@ -161,7 +166,7 @@ main {
     position: relative;
     width: 100%;
     height: 670px;
-    min-height: 250px;
+    min-height: 200px;
 
     img {
       width: 100%;
@@ -198,7 +203,7 @@ main {
         color: white;
         text-transform: uppercase;
         max-width: 600px;
-        line-height: 45px;
+        line-height: 40px;
       }
     }
   }
@@ -206,15 +211,16 @@ main {
   .main_aboutUs {
     width: 80%;
     height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 45%));
+    justify-items: center;
+    gap: 20px;
     margin: 150px auto;
 
     .aboutUs_imgsBlock {
       display: flex;
       flex-direction: column;
-      width: 50%;
+      width: 100%;
       img {
         width: 90%;
         max-width: 600px;
@@ -224,13 +230,13 @@ main {
         margin-bottom: 35px;
         border-radius: 5px;
         &:nth-child(2) {
-          transform: translateX(70px);
+          transform: translateX(50px);
         }
       }
     }
     .aboutUs_textPart {
-      width: 50%;
-      min-width: 300px;
+      display: block;
+      width: 100%;
       h2 {
         font-size: $fontSzForH2;
         font-weight: 600;
@@ -239,7 +245,7 @@ main {
         position: relative;
         &::before {
           content: "";
-          @include before-style(#f9552d, 20%, none, 0);
+          @include before-style(#f9552d, 21%, none, 0);
         }
       }
       p {
@@ -275,8 +281,8 @@ main {
       position: absolute;
       bottom: 0;
       left: 0;
-      height: 4px;
-      background-color: #f9552d;
+      height: 1px;
+      background-color: white;
     }
 
     h2 {
@@ -287,6 +293,103 @@ main {
       position: relative;
     }
 
+    .swiper {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        height: 670px;
+        border-radius: 10px;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 85%;
+          object-fit: cover;
+        }
+
+        .card_textPart {
+          height: 15%;
+          background-color: #f9552d;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.5s;
+          width: 100%;
+
+          h3 {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: calc(23px + 7 * (100vw / 1912));
+            color: #4d0000;
+            font-weight: 600;
+            line-height: 1.2;
+            overflow: hidden;
+          }
+        }
+
+        .card_aboutTheCoach {
+          position: absolute;
+          background-color: rgb(0 0 0 / 0.7);
+          width: 100%;
+          height: 85%;
+          padding: 20px;
+          color: white;
+          opacity: 0;
+          transition: all 0.5s;
+          overflow: hidden;
+
+          .aboutTheCoach_textPart {
+            width: 90%;
+            height: 100%;
+
+            p {
+              font-size: calc(22px + 6 * (100vw / 1912));
+              line-height: 30px;
+              margin-bottom: 13px;
+
+              span {
+                color: #f9552d;
+              }
+            }
+
+            ul {
+              margin: 15px 0;
+              list-style: none;
+
+              h4 {
+                font-size: calc(23px + 7 * (100vw / 1912));
+                margin-bottom: 10px;
+                color: #f9552d;
+              }
+
+              li {
+                line-height: 37px;
+                font-size: calc(22px + 6 * (100vw / 1912));
+
+                &::before {
+                  content: "— ";
+                }
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .card_aboutTheCoach {
+            opacity: 1;
+          }
+        }
+      }
+    }
     .ourTrainers_listCard {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -294,7 +397,8 @@ main {
       width: 95%;
       margin: 0 auto;
 
-      .listCard_card {
+      .listCard_card,
+      .swiper-slide {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -514,6 +618,7 @@ main {
         justify-content: space-between;
         border: 5px solid #1a1a1a;
         min-height: 400px;
+        position: relative;
 
         .card_name {
           width: 100%;
@@ -555,28 +660,32 @@ main {
           display: block;
           box-sizing: border-box;
           overflow: hidden;
+          text-decoration: none;
+          text-align: center;
           span {
             font-size: calc(23px + 7 * (100vw / 1912));
             color: #1a1a1a;
             display: inline-block;
-            transition: all 0.4s;
             position: relative;
             padding: 10px 20px;
           }
           &:hover {
             span {
               transform: translateY(-100%);
-              &::before {
-                content: attr(data-text);
-                position: absolute;
-                color: #1a1a1a;
-                width: 100%;
-                height: 100%;
-                top: 100%;
-                left: 0;
-                padding: 10px 20px;
-                box-sizing: border-box;
-              }
+              transition: all 0.4s;
+            }
+          }
+          &:hover {
+            span::before {
+              content: attr(data-text);
+              position: absolute;
+              color: #1a1a1a;
+              width: 100%;
+              height: 100%;
+              top: 100%;
+              left: 0;
+              padding: 10px 20px;
+              box-sizing: border-box;
             }
           }
           &:before {
@@ -711,15 +820,22 @@ main {
   }
 
   .main_scrollTop {
+    visibility: hidden;
+    opacity: 0;
     background-color: #34323a;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border: none;
     border-radius: 4px;
     position: fixed;
     left: 93%;
     top: 83%;
     box-shadow: 2px 2px 7px #1a1a1a;
+    transition: all 0.4s;
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }
 
@@ -757,18 +873,260 @@ footer {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 1603px) {
   header {
     .header_contactsBlock {
-      display: none;
+      .contactsBlock_content {
+        .contactsBlock_communicationMethod {
+          display: flex;
+          align-items: center;
+          width: 38%;
+        }
+      }
+
+      .communicationMethod_socialMedia {
+        width: 22%;
+      }
     }
+  }
+
+  .navigationBlock {
+    .navigationBlock_content {
+      width: 100%;
+
+      .navigateBlock_pageNavigation {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1570px) {
+  header {
     .navigationBlock {
       .navigationBlock_content {
+        .navigateBlock_pageNavigation {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  main {
+    .main_aboutUs {
+      width: 80%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 100px auto;
+
+      .aboutUs_imgsBlock {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+        justify-content: space-between;
+
+        img {
+          width: 45%;
+          &:nth-child(2) {
+            transform: translateX(0);
+          }
+        }
+      }
+      .aboutUs_textPart {
+        width: 80%;
+        h2 {
+          &::before {
+            content: "";
+            @include before-style(#f9552d, 20%, none, 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  header {
+    .navigationBlock {
+      .navigationBlock_content {
+        .navigateBlock_pageNavigation {
+          width: 60%;
+        }
+      }
+    }
+  }
+  main {
+    .main_contactsAndschedule {
+      width: 80%;
+
+      .contactsAndschedule_content {
+        width: 100%;
+        flex-direction: column;
+        .content_textPart {
+          width: 100%;
+          ul {
+            .social {
+              width: 30%;
+            }
+          }
+        }
+        iframe {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1149px) {
+  header {
+    .navigationBlock {
+      .navigationBlock_content {
+        .navigateBlock_pageNavigation {
+          width: 75%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  header {
+    .header_contactsBlock {
+      .contactsBlock_content {
+        .contactsBlock_communicationMethod {
+          width: 25%;
+        }
+      }
+    }
+
+    .navigationBlock {
+      .navigationBlock_content {
+        width: 90%;
+        margin: 0 auto;
         .navigateBlock_pageNavigation {
           display: none;
         }
         .navigateBlock_menuBurger {
           display: flex;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  main {
+    .main_aboutUs {
+      .aboutUs_imgsBlock {
+        img {
+          width: 100%;
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 828px) {
+  header {
+    .header_contactsBlock {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 675px) {
+  main {
+    .main_presentBlock {
+      height: 470px;
+
+      img {
+        filter: grayscale(80%);
+      }
+
+      .presentBlock_textPart {
+        p {
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 510px) {
+  main {
+    .main_aboutUs {
+      width: 90%;
+      .aboutUs_imgsBlock {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+      .aboutUs_textPart {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 396px) {
+  main {
+    .main_aboutUs {
+      .aboutUs_textPart {
+        width: 100%;
+        p {
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+      }
+    }
+    .main_contactsAndschedule {
+      width: 100%;
+
+      h2 {
+        text-align: center;
+      }
+      .contactsAndschedule_content {
+        width: 100%;
+        flex-direction: column;
+        margin: 50px 0 0 0;
+        .content_textPart {
+          width: 90%;
+          ul {
+            .social {
+              width: 30%;
+            }
+          }
+        }
+        iframe {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  main {
+    .main_presentBlock {
+      .presentBlock_textPart {
+        top: 4%;
+        left: 4%;
+
+        .textPart_title {
+          h1 {
+            color: #f9552d;
+          }
+        }
+        p {
+          line-height: 30px;
         }
       }
     }
