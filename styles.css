@@ -343,12 +343,12 @@ main .main_ourTrainers .swiper {
   width: 90%;
   margin: 0 auto;
 }
-main .main_ourTrainers .swiper-wrapper {
+main .main_ourTrainers .swiper .swiper-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-main .main_ourTrainers .swiper-wrapper .swiper-slide {
+main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -362,13 +362,13 @@ main .main_ourTrainers .swiper-wrapper .swiper-slide {
   overflow: hidden;
   position: relative;
 }
-main .main_ourTrainers .swiper-wrapper .swiper-slide img {
+main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide img {
   width: 100%;
   height: 85%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .main_ourTrainers .swiper-wrapper .swiper-slide .card_textPart {
+main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_textPart {
   height: 15%;
   background-color: #f9552d;
   display: -webkit-box;
@@ -384,7 +384,7 @@ main .main_ourTrainers .swiper-wrapper .swiper-slide .card_textPart {
   transition: all 0.5s;
   width: 100%;
 }
-main .main_ourTrainers .swiper-wrapper .swiper-slide .card_textPart h3 {
+main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_textPart h3 {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -394,7 +394,7 @@ main .main_ourTrainers .swiper-wrapper .swiper-slide .card_textPart h3 {
   line-height: 1.2;
   overflow: hidden;
 }
-main .main_ourTrainers .swiper-wrapper .swiper-slide .card_aboutTheCoach {
+main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -406,35 +406,35 @@ main .main_ourTrainers .swiper-wrapper .swiper-slide .card_aboutTheCoach {
   transition: all 0.5s;
   overflow: hidden;
 }
-main .main_ourTrainers .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart {
+main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart {
   width: 90%;
   height: 100%;
 }
-main .main_ourTrainers .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart p {
+main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart p {
   font-size: calc(22px + 0.3138075314vw);
   line-height: 30px;
   margin-bottom: 13px;
 }
-main .main_ourTrainers .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart p span {
+main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart p span {
   color: #f9552d;
 }
-main .main_ourTrainers .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul {
+main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul {
   margin: 15px 0;
   list-style: none;
 }
-main .main_ourTrainers .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul h4 {
+main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul h4 {
   font-size: calc(23px + 0.3661087866vw);
   margin-bottom: 10px;
   color: #f9552d;
 }
-main .main_ourTrainers .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul li {
+main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul li {
   line-height: 37px;
   font-size: calc(22px + 0.3138075314vw);
 }
-main .main_ourTrainers .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul li::before {
+main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul li::before {
   content: "— ";
 }
-main .main_ourTrainers .swiper-wrapper .swiper-slide:hover .card_aboutTheCoach {
+main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide:hover .card_aboutTheCoach {
   opacity: 1;
 }
 main .main_ourTrainers .ourTrainers_listCard {
@@ -442,11 +442,10 @@ main .main_ourTrainers .ourTrainers_listCard {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 15px;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card,
-main .main_ourTrainers .ourTrainers_listCard .swiper-slide {
+main .main_ourTrainers .ourTrainers_listCard .listCard_card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -455,21 +454,19 @@ main .main_ourTrainers .ourTrainers_listCard .swiper-slide {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  height: 670px;
+  min-height: 670px;
   border-radius: 10px;
   cursor: pointer;
   overflow: hidden;
   position: relative;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card img,
-main .main_ourTrainers .ourTrainers_listCard .swiper-slide img {
+main .main_ourTrainers .ourTrainers_listCard .listCard_card img {
   width: 100%;
   height: 85%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_textPart,
-main .main_ourTrainers .ourTrainers_listCard .swiper-slide .card_textPart {
+main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_textPart {
   height: 15%;
   background-color: #f9552d;
   display: -webkit-box;
@@ -485,8 +482,7 @@ main .main_ourTrainers .ourTrainers_listCard .swiper-slide .card_textPart {
   transition: all 0.5s;
   width: 100%;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_textPart h3,
-main .main_ourTrainers .ourTrainers_listCard .swiper-slide .card_textPart h3 {
+main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_textPart h3 {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -496,8 +492,7 @@ main .main_ourTrainers .ourTrainers_listCard .swiper-slide .card_textPart h3 {
   line-height: 1.2;
   overflow: hidden;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach,
-main .main_ourTrainers .ourTrainers_listCard .swiper-slide .card_aboutTheCoach {
+main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -509,43 +504,35 @@ main .main_ourTrainers .ourTrainers_listCard .swiper-slide .card_aboutTheCoach {
   transition: all 0.5s;
   overflow: hidden;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart,
-main .main_ourTrainers .ourTrainers_listCard .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart {
+main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart {
   width: 90%;
   height: 100%;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart p,
-main .main_ourTrainers .ourTrainers_listCard .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart p {
+main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart p {
   font-size: calc(22px + 0.3138075314vw);
   line-height: 30px;
   margin-bottom: 13px;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart p span,
-main .main_ourTrainers .ourTrainers_listCard .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart p span {
+main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart p span {
   color: #f9552d;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart ul,
-main .main_ourTrainers .ourTrainers_listCard .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul {
+main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart ul {
   margin: 15px 0;
   list-style: none;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart ul h4,
-main .main_ourTrainers .ourTrainers_listCard .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul h4 {
+main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart ul h4 {
   font-size: calc(23px + 0.3661087866vw);
   margin-bottom: 10px;
   color: #f9552d;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart ul li,
-main .main_ourTrainers .ourTrainers_listCard .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul li {
+main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart ul li {
   line-height: 37px;
   font-size: calc(22px + 0.3138075314vw);
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart ul li::before,
-main .main_ourTrainers .ourTrainers_listCard .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul li::before {
+main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart ul li::before {
   content: "— ";
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card:hover .card_aboutTheCoach,
-main .main_ourTrainers .ourTrainers_listCard .swiper-slide:hover .card_aboutTheCoach {
+main .main_ourTrainers .ourTrainers_listCard .listCard_card:hover .card_aboutTheCoach {
   opacity: 1;
 }
 main .main_ourCourses {

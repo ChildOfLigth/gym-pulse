@@ -296,113 +296,113 @@ main {
     .swiper {
       width: 90%;
       margin: 0 auto;
-    }
 
-    .swiper-wrapper {
-      display: flex;
-      .swiper-slide {
+      .swiper-wrapper {
         display: flex;
-        flex-direction: column;
-        height: 670px;
-        border-radius: 10px;
-        cursor: pointer;
-        overflow: hidden;
-        position: relative;
-
-        img {
-          width: 100%;
-          height: 85%;
-          object-fit: cover;
-        }
-
-        .card_textPart {
-          height: 15%;
-          background-color: #f9552d;
+        .swiper-slide {
           display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.5s;
-          width: 100%;
-
-          h3 {
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            font-size: calc(23px + 7 * (100vw / 1912));
-            color: #4d0000;
-            font-weight: 600;
-            line-height: 1.2;
-            overflow: hidden;
-          }
-        }
-
-        .card_aboutTheCoach {
-          position: absolute;
-          background-color: rgb(0 0 0 / 0.7);
-          width: 100%;
-          height: 85%;
-          padding: 20px;
-          color: white;
-          opacity: 0;
-          transition: all 0.5s;
+          flex-direction: column;
+          height: 670px;
+          border-radius: 10px;
+          cursor: pointer;
           overflow: hidden;
+          position: relative;
 
-          .aboutTheCoach_textPart {
-            width: 90%;
-            height: 100%;
+          img {
+            width: 100%;
+            height: 85%;
+            object-fit: cover;
+          }
 
-            p {
-              font-size: calc(22px + 6 * (100vw / 1912));
-              line-height: 30px;
-              margin-bottom: 13px;
+          .card_textPart {
+            height: 15%;
+            background-color: #f9552d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s;
+            width: 100%;
 
-              span {
-                color: #f9552d;
-              }
+            h3 {
+              margin: 0;
+              padding: 0;
+              text-align: center;
+              font-size: calc(23px + 7 * (100vw / 1912));
+              color: #4d0000;
+              font-weight: 600;
+              line-height: 1.2;
+              overflow: hidden;
             }
+          }
 
-            ul {
-              margin: 15px 0;
-              list-style: none;
+          .card_aboutTheCoach {
+            position: absolute;
+            background-color: rgb(0 0 0 / 0.7);
+            width: 100%;
+            height: 85%;
+            padding: 20px;
+            color: white;
+            opacity: 0;
+            transition: all 0.5s;
+            overflow: hidden;
 
-              h4 {
-                font-size: calc(23px + 7 * (100vw / 1912));
-                margin-bottom: 10px;
-                color: #f9552d;
+            .aboutTheCoach_textPart {
+              width: 90%;
+              height: 100%;
+
+              p {
+                font-size: calc(22px + 6 * (100vw / 1912));
+                line-height: 30px;
+                margin-bottom: 13px;
+
+                span {
+                  color: #f9552d;
+                }
               }
 
-              li {
-                line-height: 37px;
-                font-size: calc(22px + 6 * (100vw / 1912));
+              ul {
+                margin: 15px 0;
+                list-style: none;
 
-                &::before {
-                  content: "— ";
+                h4 {
+                  font-size: calc(23px + 7 * (100vw / 1912));
+                  margin-bottom: 10px;
+                  color: #f9552d;
+                }
+
+                li {
+                  line-height: 37px;
+                  font-size: calc(22px + 6 * (100vw / 1912));
+
+                  &::before {
+                    content: "— ";
+                  }
                 }
               }
             }
           }
-        }
 
-        &:hover {
-          .card_aboutTheCoach {
-            opacity: 1;
+          &:hover {
+            .card_aboutTheCoach {
+              opacity: 1;
+            }
           }
         }
       }
     }
+
     .ourTrainers_listCard {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 15px;
-      width: 95%;
+      width: 90%;
       margin: 0 auto;
 
-      .listCard_card,
-      .swiper-slide {
+      .listCard_card {
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 670px;
+        min-height: 670px;
         border-radius: 10px;
         cursor: pointer;
         overflow: hidden;
@@ -868,6 +868,16 @@ footer {
             color: #f9552d;
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1707px) {
+  main {
+    .main_ourTrainers {
+      .ourCourses_listCourse {
+        
       }
     }
   }

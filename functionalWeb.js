@@ -49,7 +49,7 @@ buttonScrollTop.onclick = () => {
   });
 };
 
-const listTrainersCards = document.querySelector(".main_ourTrainers");
+const listTrainersCards = document.querySelector(".main_wrapperOurTrainers");
 let swiperInstance;
 
 window.addEventListener("DOMContentLoaded", function () {
@@ -106,52 +106,56 @@ window.addEventListener("DOMContentLoaded", function () {
               </div>
             </div>
           </div>
-           <div class="${classForCard}">
-           <img src="imgs/trainerНиколь.webp" alt="" />
-           <div class="card_textPart">
-             <h3>Сидорченко Николь</h3>
-           </div>
-           <div class="card_aboutTheCoach">
-             <div class="aboutTheCoach_textPart">
-               <p>
-                 <span>Николь</span> — профессиональный тренер с шестилетним
-                 опытом, который помогает клиентам достигать гармонии между
-                 телом и духом.
-               </p>
-               <p>Стаж работы: 6 лет</p>
-               <ul>
-                 <h4>Специалист по:</h4>
-                 <li>Индивидуальным тренировкам,</li>
-                 <li>Кроссфиту,</li>
-                 <li>Стретчингу,</li>
-                 <li>Груповым тренировкам,</li>
-               </ul>
-             </div>
-           </div>
-         </div>
-         <div class="${classForCard}">
-           <img src="imgs/trainerArtemii.jpg" alt="" />
-           <div class="card_textPart">
-             <h3>Чернов Артемий</h3>
-           </div>
-           <div class="card_aboutTheCoach">
-             <div class="aboutTheCoach_textPart">
-               <p>
-                 <span>Артемий</span> — опытный и вдохновляющий тренер, который
-                 уже 7 лет помогает своим клиентам становиться сильнее, гибче и
-                 увереннее в себе.
-               </p>
-               <p>Стаж работы: 7 лет</p>
-               <ul>
-                 <h4>Специалист по:</h4>
-                 <li>Индивидуальным тренировкам,</li>
-                 <li>Стретчингу,</li>
-                 <li>Груповым тренировкам,</li>
-                 <li>Боксу,</li>
-               </ul>
-             </div>
-           </div>
+          <div class="${classForCard}">
+            <img src="imgs/trainerНиколь.webp" alt="" />
+            <div class="card_textPart">
+              <h3>Сидорченко Николь</h3>
+            </div>
+            <div class="card_aboutTheCoach">
+              <div class="aboutTheCoach_textPart">
+                <p>
+                  <span>Николь</span> — профессиональный тренер с шестилетним
+                  опытом, который помогает клиентам достигать гармонии между
+                  телом и духом.
+                </p>
+                <p>Стаж работы: 6 лет</p>
+                <ul>
+                  <h4>Специалист по:</h4>
+                  <li>Индивидуальным тренировкам,</li>
+                  <li>Кроссфиту,</li>
+                  <li>Стретчингу,</li>
+                  <li>Груповым тренировкам,</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="${classForCard}">
+            <img src="imgs/trainerArtemii.jpg" alt="" />
+            <div class="card_textPart">
+              <h3>Чернов Артемий</h3>
+            </div>
+            <div class="card_aboutTheCoach">
+              <div class="aboutTheCoach_textPart">
+                <p>
+                  <span>Артемий</span> — опытный и вдохновляющий тренер, который
+                  уже 7 лет помогает своим клиентам становиться сильнее, гибче и
+                  увереннее в себе.
+                </p>
+                <p>Стаж работы: 7 лет</p>
+                <ul>
+                  <h4>Специалист по:</h4>
+                  <li>Индивидуальным тренировкам,</li>
+                  <li>Стретчингу,</li>
+                  <li>Груповым тренировкам,</li>
+                  <li>Боксу,</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- Pagination и Scrollbar должны быть размещены здесь -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-scrollbar"></div>
       </div>
     `;
   }
@@ -160,12 +164,14 @@ window.addEventListener("DOMContentLoaded", function () {
     let classForContainer;
     let classForContainerForCards;
     let classForCard;
+    let classForPagination;
 
     if (window.innerWidth <= 720) {
       classForContainer = "swiper";
       classForContainerForCards = "swiper-wrapper";
       classForCard = "swiper-slide";
     } else {
+      classForContainer = "main_ourTrainers";
       classForContainerForCards = "ourTrainers_listCard";
       classForCard = "listCard_card";
     }
@@ -178,7 +184,8 @@ window.addEventListener("DOMContentLoaded", function () {
     listFillFunction(
       classForContainer,
       classForContainerForCards,
-      classForCard
+      classForCard,
+      classForPagination
     );
 
     if (classForContainer === "swiper") {
@@ -188,6 +195,15 @@ window.addEventListener("DOMContentLoaded", function () {
         direction: "horizontal",
         loop: true,
         centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          draggable: true,
+          snapOnRelease: true,
+        },
       });
     }
   }
