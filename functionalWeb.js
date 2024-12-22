@@ -1,3 +1,16 @@
+const menu_burger = document.querySelector(".navigateBlock_menuBurger");
+const blockWithLinks = document.querySelector(
+  ".navigateBlock_hiddenBlockWithLinks"
+);
+menu_burger.onclick = () => {
+  blockWithLinks.classList.add("active");
+};
+
+const closeMenuBurger = document.querySelector(".closeMenuBurger");
+closeMenuBurger.onclick = () => {
+  blockWithLinks.classList.remove("active");
+};
+
 const seasonTicketCard = document.querySelectorAll(".seasonTicketList_card");
 
 let currentlyOpenModal = null;
@@ -170,7 +183,7 @@ window.addEventListener("DOMContentLoaded", function () {
       classForCard = "swiper-slide";
 
       listTrainersCards.style.display = "flex";
-      listTrainersCards.style.width = "60%";
+      listTrainersCards.style.width = "100%";
     } else {
       classForContainer = "main_ourTrainers";
       classForContainerForCards = "ourTrainers_listCard";
@@ -198,7 +211,7 @@ window.addEventListener("DOMContentLoaded", function () {
         direction: "horizontal",
         loop: true,
         centeredSlides: true,
-        effect: 'slide',
+        effect: "slide",
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
