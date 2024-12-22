@@ -83,7 +83,7 @@ window.addEventListener("DOMContentLoaded", function () {
               </div>
             </div>
           </div>
-          <div class="${classForCard}">
+           <div class="${classForCard}">
             <img src="imgs/treinerСофия.webp" alt="" />
             <div class="card_textPart">
               <h3>Войчик София</h3>
@@ -153,7 +153,6 @@ window.addEventListener("DOMContentLoaded", function () {
             </div>
           </div>
         </div>
-        <!-- Pagination и Scrollbar должны быть размещены здесь -->
         <div class="swiper-pagination"></div>
         <div class="swiper-scrollbar"></div>
       </div>
@@ -164,16 +163,21 @@ window.addEventListener("DOMContentLoaded", function () {
     let classForContainer;
     let classForContainerForCards;
     let classForCard;
-    let classForPagination;
 
     if (window.innerWidth <= 720) {
       classForContainer = "swiper";
       classForContainerForCards = "swiper-wrapper";
       classForCard = "swiper-slide";
+
+      listTrainersCards.style.display = "flex";
+      listTrainersCards.style.width = "60%";
     } else {
       classForContainer = "main_ourTrainers";
       classForContainerForCards = "ourTrainers_listCard";
       classForCard = "listCard_card";
+
+      listTrainersCards.style.display = "grid";
+      listTrainersCards.style.width = "100%";
     }
 
     if (swiperInstance) {
@@ -184,8 +188,7 @@ window.addEventListener("DOMContentLoaded", function () {
     listFillFunction(
       classForContainer,
       classForContainerForCards,
-      classForCard,
-      classForPagination
+      classForCard
     );
 
     if (classForContainer === "swiper") {
@@ -195,6 +198,7 @@ window.addEventListener("DOMContentLoaded", function () {
         direction: "horizontal",
         loop: true,
         centeredSlides: true,
+        effect: 'slide',
         pagination: {
           el: ".swiper-pagination",
           clickable: true,

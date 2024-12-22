@@ -189,6 +189,7 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 0px;
           flex: 1 0 0;
+  margin: 0 auto;
 }
 main .main_presentBlock {
   position: relative;
@@ -299,7 +300,33 @@ main .main_aboutUs .aboutUs_textPart p span {
   color: #f9552d;
   font-weight: 600;
 }
-main .main_ourTrainers {
+main .main_wrapperOurTrainers {
+  background-color: #1a1a1a;
+  font-family: "Roboto", sans-serif;
+  padding: 50px 0 120px 0;
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+}
+main .main_wrapperOurTrainers::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background-color: white;
+}
+main .main_wrapperOurTrainers h2 {
+  font-size: calc(34px + 0.9414225941vw);
+  color: white;
+  font-weight: 600;
+  margin-bottom: 50px;
+  position: relative;
+}
+main .main_wrapperOurTrainers .swiper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,42 +340,16 @@ main .main_ourTrainers {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 auto;
-  padding: 50px 0 120px 0;
-  width: 100%;
-  height: auto;
-  background-color: #1a1a1a;
-  font-family: "Roboto", sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   position: relative;
-}
-main .main_ourTrainers::after {
-  content: "";
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 1px;
-  background-color: white;
-}
-main .main_ourTrainers h2 {
-  font-size: calc(34px + 0.9414225941vw);
-  color: white;
-  font-weight: 600;
-  margin-bottom: 50px;
-  position: relative;
-}
-main .main_ourTrainers .swiper {
-  width: 90%;
   margin: 0 auto;
 }
-main .main_ourTrainers .swiper .swiper-wrapper {
+main .main_wrapperOurTrainers .swiper .swiper-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 15px;
 }
-main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide {
+main .main_wrapperOurTrainers .swiper .swiper-wrapper .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -356,19 +357,20 @@ main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 670px;
+  width: 400px;
+  min-height: 670px;
   border-radius: 10px;
   cursor: pointer;
   overflow: hidden;
   position: relative;
 }
-main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide img {
+main .main_wrapperOurTrainers .swiper .swiper-wrapper .swiper-slide img {
   width: 100%;
   height: 85%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_textPart {
+main .main_wrapperOurTrainers .swiper .swiper-wrapper .swiper-slide .card_textPart {
   height: 15%;
   background-color: #f9552d;
   display: -webkit-box;
@@ -384,7 +386,7 @@ main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_textPart {
   transition: all 0.5s;
   width: 100%;
 }
-main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_textPart h3 {
+main .main_wrapperOurTrainers .swiper .swiper-wrapper .swiper-slide .card_textPart h3 {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -394,7 +396,7 @@ main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_textPart h3 {
   line-height: 1.2;
   overflow: hidden;
 }
-main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach {
+main .main_wrapperOurTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -406,38 +408,54 @@ main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach
   transition: all 0.5s;
   overflow: hidden;
 }
-main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart {
+main .main_wrapperOurTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart {
   width: 90%;
   height: 100%;
 }
-main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart p {
+main .main_wrapperOurTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart p {
   font-size: calc(22px + 0.3138075314vw);
   line-height: 30px;
   margin-bottom: 13px;
 }
-main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart p span {
+main .main_wrapperOurTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart p span {
   color: #f9552d;
 }
-main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul {
+main .main_wrapperOurTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul {
   margin: 15px 0;
   list-style: none;
 }
-main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul h4 {
+main .main_wrapperOurTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul h4 {
   font-size: calc(23px + 0.3661087866vw);
   margin-bottom: 10px;
   color: #f9552d;
 }
-main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul li {
+main .main_wrapperOurTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul li {
   line-height: 37px;
   font-size: calc(22px + 0.3138075314vw);
 }
-main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul li::before {
+main .main_wrapperOurTrainers .swiper .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul li::before {
   content: "— ";
 }
-main .main_ourTrainers .swiper .swiper-wrapper .swiper-slide:hover .card_aboutTheCoach {
+main .main_wrapperOurTrainers .swiper .swiper-wrapper .swiper-slide:hover .card_aboutTheCoach {
   opacity: 1;
 }
-main .main_ourTrainers .ourTrainers_listCard {
+main .main_wrapperOurTrainers .main_ourTrainers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -445,7 +463,7 @@ main .main_ourTrainers .ourTrainers_listCard {
   width: 90%;
   margin: 0 auto;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card {
+main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -460,13 +478,13 @@ main .main_ourTrainers .ourTrainers_listCard .listCard_card {
   overflow: hidden;
   position: relative;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card img {
+main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card img {
   width: 100%;
   height: 85%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_textPart {
+main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card .card_textPart {
   height: 15%;
   background-color: #f9552d;
   display: -webkit-box;
@@ -482,7 +500,7 @@ main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_textPart {
   transition: all 0.5s;
   width: 100%;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_textPart h3 {
+main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card .card_textPart h3 {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -492,7 +510,7 @@ main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_textPart h3 {
   line-height: 1.2;
   overflow: hidden;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach {
+main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -504,35 +522,35 @@ main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach 
   transition: all 0.5s;
   overflow: hidden;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart {
+main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart {
   width: 90%;
   height: 100%;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart p {
+main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart p {
   font-size: calc(22px + 0.3138075314vw);
   line-height: 30px;
   margin-bottom: 13px;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart p span {
+main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart p span {
   color: #f9552d;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart ul {
+main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart ul {
   margin: 15px 0;
   list-style: none;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart ul h4 {
+main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart ul h4 {
   font-size: calc(23px + 0.3661087866vw);
   margin-bottom: 10px;
   color: #f9552d;
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart ul li {
+main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart ul li {
   line-height: 37px;
   font-size: calc(22px + 0.3138075314vw);
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart ul li::before {
+main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card .card_aboutTheCoach .aboutTheCoach_textPart ul li::before {
   content: "— ";
 }
-main .main_ourTrainers .ourTrainers_listCard .listCard_card:hover .card_aboutTheCoach {
+main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card:hover .card_aboutTheCoach {
   opacity: 1;
 }
 main .main_ourCourses {
@@ -548,9 +566,14 @@ main .main_ourCourses {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-size: cover;
-  padding: 60px 0;
+  background-repeat: no-repeat;
+  background-image: url("imgs/photoForCoursesBlock.webp");
   margin: 0 auto;
+  padding: 60px 0;
 }
 main .main_ourCourses .ourCourses_textPart {
   width: 100%;
@@ -564,12 +587,17 @@ main .main_ourCourses .ourCourses_textPart h2 {
   position: relative;
 }
 main .main_ourCourses .ourCourses_listCourse {
-  width: 83%;
+  width: 90%;
   height: auto;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 30px;
   margin: 40px auto;
 }
@@ -577,7 +605,6 @@ main .main_ourCourses .ourCourses_listCourse .listCourse_elem {
   width: 100%;
   height: 580px;
   max-height: 620px;
-  min-height: 460px;
   border: 5px solid #1a1a1a;
   position: relative;
 }
@@ -632,6 +659,9 @@ main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_aboutCourse 
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 50px auto;
 }
 main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_aboutCourse .aboutCourse_textPart h3 {
@@ -787,11 +817,11 @@ main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_modalWin
   border: none;
   position: absolute;
   top: 12px;
-  left: 90%;
+  left: 94%;
 }
 main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList .closeModalWindow img {
   width: 40px;
-  min-width: 30px;
+  min-width: 20px;
   height: auto;
 }
 main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList h3 {
@@ -945,6 +975,11 @@ footer .footer_content .content_listPageNavigation li a:hover {
   color: #f9552d;
 }
 
+@media (max-width: 1710px) {
+  .main_ourCourses .ourCourses_listCourse {
+    width: 100%;
+  }
+}
 @media (max-width: 1603px) {
   header .header_contactsBlock .contactsBlock_content .contactsBlock_communicationMethod {
     display: -webkit-box;
@@ -1051,6 +1086,19 @@ footer .footer_content .content_listPageNavigation li a:hover {
     width: 75%;
   }
 }
+@media (max-width: 1030px) {
+  main .main_ourCourses .ourCourses_listCourse {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .main_ourCourses .ourCourses_listCourse .listCourse_elem {
+    width: 46%;
+  }
+}
 @media (max-width: 920px) {
   header .header_contactsBlock .contactsBlock_content .contactsBlock_communicationMethod {
     width: 25%;
@@ -1074,6 +1122,32 @@ footer .footer_content .content_listPageNavigation li a:hover {
   main .main_aboutUs .aboutUs_imgsBlock img:nth-child(2) {
     display: none;
   }
+  main .main_ourCourses {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .main_ourCourses .ourCourses_listCourse {
+    width: 80%;
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .main_ourCourses .ourCourses_listCourse .listCourse_elem {
+    width: 100%;
+    height: 430px;
+  }
+  main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList .closeModalWindow {
+    top: 14px;
+    left: 85%;
+  }
 }
 @media (max-width: 828px) {
   header .header_contactsBlock {
@@ -1090,6 +1164,12 @@ footer .footer_content .content_listPageNavigation li a:hover {
   }
   main .main_presentBlock .presentBlock_textPart p {
     line-height: 30px;
+  }
+}
+@media (max-width: 645px) {
+  main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList .closeModalWindow {
+    top: 20px;
+    left: 80%;
   }
 }
 @media (max-width: 510px) {

@@ -162,6 +162,7 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1 0 0;
+  margin: 0 auto;
   .main_presentBlock {
     position: relative;
     width: 100%;
@@ -261,19 +262,14 @@ main {
     }
   }
 
-  .main_ourTrainers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+  .main_wrapperOurTrainers {
+    background-color: #1a1a1a;
+    font-family: "Roboto", sans-serif;
     padding: 50px 0 120px 0;
     width: 100%;
     height: auto;
-    background-color: #1a1a1a;
-    font-family: "Roboto", sans-serif;
     box-sizing: border-box;
-    position: relative;
+    margin: 0 auto;
 
     &::after {
       content: "";
@@ -294,15 +290,21 @@ main {
     }
 
     .swiper {
-      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
       margin: 0 auto;
-
       .swiper-wrapper {
         display: flex;
+        gap: 15px;
+
         .swiper-slide {
           display: flex;
           flex-direction: column;
-          height: 670px;
+          width: 400px;
+          min-height: 670px;
           border-radius: 10px;
           cursor: pointer;
           overflow: hidden;
@@ -391,100 +393,108 @@ main {
       }
     }
 
-    .ourTrainers_listCard {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 15px;
-      width: 90%;
-      margin: 0 auto;
+    .main_ourTrainers {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
 
-      .listCard_card {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        min-height: 670px;
-        border-radius: 10px;
-        cursor: pointer;
-        overflow: hidden;
-        position: relative;
+      .ourTrainers_listCard {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
+        width: 90%;
+        margin: 0 auto;
 
-        img {
-          width: 100%;
-          height: 85%;
-          object-fit: cover;
-        }
-
-        .card_textPart {
-          height: 15%;
-          background-color: #f9552d;
+        .listCard_card {
           display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.5s;
+          flex-direction: column;
           width: 100%;
-
-          h3 {
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            font-size: calc(23px + 7 * (100vw / 1912));
-            color: #4d0000;
-            font-weight: 600;
-            line-height: 1.2;
-            overflow: hidden;
-          }
-        }
-
-        .card_aboutTheCoach {
-          position: absolute;
-          background-color: rgb(0 0 0 / 0.7);
-          width: 100%;
-          height: 85%;
-          padding: 20px;
-          color: white;
-          opacity: 0;
-          transition: all 0.5s;
+          min-height: 670px;
+          border-radius: 10px;
+          cursor: pointer;
           overflow: hidden;
+          position: relative;
 
-          .aboutTheCoach_textPart {
-            width: 90%;
-            height: 100%;
+          img {
+            width: 100%;
+            height: 85%;
+            object-fit: cover;
+          }
 
-            p {
-              font-size: calc(22px + 6 * (100vw / 1912));
-              line-height: 30px;
-              margin-bottom: 13px;
+          .card_textPart {
+            height: 15%;
+            background-color: #f9552d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s;
+            width: 100%;
 
-              span {
-                color: #f9552d;
-              }
+            h3 {
+              margin: 0;
+              padding: 0;
+              text-align: center;
+              font-size: calc(23px + 7 * (100vw / 1912));
+              color: #4d0000;
+              font-weight: 600;
+              line-height: 1.2;
+              overflow: hidden;
             }
+          }
 
-            ul {
-              margin: 15px 0;
-              list-style: none;
+          .card_aboutTheCoach {
+            position: absolute;
+            background-color: rgb(0 0 0 / 0.7);
+            width: 100%;
+            height: 85%;
+            padding: 20px;
+            color: white;
+            opacity: 0;
+            transition: all 0.5s;
+            overflow: hidden;
 
-              h4 {
-                font-size: calc(23px + 7 * (100vw / 1912));
-                margin-bottom: 10px;
-                color: #f9552d;
+            .aboutTheCoach_textPart {
+              width: 90%;
+              height: 100%;
+
+              p {
+                font-size: calc(22px + 6 * (100vw / 1912));
+                line-height: 30px;
+                margin-bottom: 13px;
+
+                span {
+                  color: #f9552d;
+                }
               }
 
-              li {
-                line-height: 37px;
-                font-size: calc(22px + 6 * (100vw / 1912));
+              ul {
+                margin: 15px 0;
+                list-style: none;
 
-                &::before {
-                  content: "— ";
+                h4 {
+                  font-size: calc(23px + 7 * (100vw / 1912));
+                  margin-bottom: 10px;
+                  color: #f9552d;
+                }
+
+                li {
+                  line-height: 37px;
+                  font-size: calc(22px + 6 * (100vw / 1912));
+
+                  &::before {
+                    content: "— ";
+                  }
                 }
               }
             }
           }
-        }
 
-        &:hover {
-          .card_aboutTheCoach {
-            opacity: 1;
+          &:hover {
+            .card_aboutTheCoach {
+              opacity: 1;
+            }
           }
         }
       }
@@ -497,9 +507,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-size: cover;
-    padding: 60px 0;
+    background-repeat: no-repeat;
+    background-image: url("imgs/photoForCoursesBlock.webp");
     margin: 0 auto;
+    padding: 60px 0;
 
     .ourCourses_textPart {
       width: 100%;
@@ -515,11 +528,12 @@ main {
     }
 
     .ourCourses_listCourse {
-      width: 83%;
+      width: 90%;
       height: auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
-      justify-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      justify-content: space-between;
+      align-items: center;
       gap: 30px;
       margin: 40px auto;
 
@@ -527,7 +541,6 @@ main {
         width: 100%;
         height: 580px;
         max-height: 620px;
-        min-height: 460px;
         border: 5px solid #1a1a1a;
         position: relative;
 
@@ -546,6 +559,7 @@ main {
             text-align: center;
           }
         }
+
         img {
           width: 100%;
           height: 85%;
@@ -560,7 +574,7 @@ main {
           left: 0;
           width: 100%;
           height: 85%;
-          background-color: rgb(0 0 0 / 0.7);
+          background-color: rgba(0, 0, 0, 0.7);
           transition: all 0.5s;
 
           .aboutCourse_textPart {
@@ -569,6 +583,7 @@ main {
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             margin: 50px auto;
 
             h3 {
@@ -576,12 +591,14 @@ main {
               margin-bottom: 15px;
               text-transform: uppercase;
             }
+
             p {
               font-size: calc(21px + 5 * (100vw / 1912));
               line-height: 36px;
             }
           }
         }
+
         &:hover {
           .elem_aboutCourse {
             opacity: 1;
@@ -595,6 +612,7 @@ main {
     width: 90%;
     height: auto;
     margin: 65px auto 90px auto;
+
     h2 {
       font-size: $fontSzForH2;
       color: #1a1a1a;
@@ -633,15 +651,18 @@ main {
         .card_textPart {
           padding: 20px;
           flex-grow: 1;
+
           p {
             font-size: calc(21px + 5 * (100vw / 1912));
             color: #1a1a1a;
             line-height: 40px;
             margin-bottom: 10px;
+
             span {
               color: #f9552d;
               font-weight: 600;
             }
+
             &:nth-child(1) {
               font-size: calc(24px + 8 * (100vw / 1912));
               text-align: center;
@@ -662,6 +683,7 @@ main {
           overflow: hidden;
           text-decoration: none;
           text-align: center;
+
           span {
             font-size: calc(23px + 7 * (100vw / 1912));
             color: #1a1a1a;
@@ -669,13 +691,13 @@ main {
             position: relative;
             padding: 10px 20px;
           }
+
           &:hover {
             span {
               transform: translateY(-100%);
               transition: all 0.4s;
             }
-          }
-          &:hover {
+
             span::before {
               content: attr(data-text);
               position: absolute;
@@ -688,6 +710,7 @@ main {
               box-sizing: border-box;
             }
           }
+
           &:before {
             content: "";
             position: absolute;
@@ -698,6 +721,7 @@ main {
             background-color: #f9552d;
             transition: all 0.5s;
           }
+
           &:hover::before {
             height: 100%;
           }
@@ -722,18 +746,21 @@ main {
             border: none;
             position: absolute;
             top: 12px;
-            left: 90%;
+            left: 94%;
+
             img {
               width: 40px;
-              min-width: 30px;
+              min-width: 20px;
               height: auto;
             }
           }
+
           h3 {
             color: #f9552d;
             font-size: calc(22px + 6 * (100vw / 1912));
             margin-bottom: 10px;
           }
+
           li {
             font-size: calc(21px + 5 * (100vw / 1912));
             line-height: 34px;
@@ -873,12 +900,10 @@ footer {
   }
 }
 
-@media (max-width: 1707px) {
-  main {
-    .main_ourTrainers {
-      .ourCourses_listCourse {
-        
-      }
+@media (max-width: 1710px) {
+  .main_ourCourses {
+    .ourCourses_listCourse {
+      width: 100%;
     }
   }
 }
@@ -1003,6 +1028,21 @@ footer {
   }
 }
 
+@media (max-width: 1030px) {
+  main {
+    .main_ourCourses {
+      .ourCourses_listCourse {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        .listCourse_elem {
+          width: 46%;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 920px) {
   header {
     .header_contactsBlock {
@@ -1039,6 +1079,35 @@ footer {
         }
       }
     }
+
+    .main_ourCourses {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .ourCourses_listCourse {
+        width: 80%;
+        display: grid;
+        flex-wrap: wrap;
+
+        .listCourse_elem {
+          width: 100%;
+          height: 430px;
+        }
+      }
+    }
+
+    .main_passes {
+      .passes_seasonTicketList {
+        .seasonTicketList_card {
+          .card_modalWindWithFeatureList {
+            .closeModalWindow {
+              top: 14px;
+              left: 85%;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1062,6 +1131,23 @@ footer {
       .presentBlock_textPart {
         p {
           line-height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 645px) {
+  main {
+    .main_passes {
+      .passes_seasonTicketList {
+        .seasonTicketList_card {
+          .card_modalWindWithFeatureList {
+            .closeModalWindow {
+              top: 20px;
+              left: 80%;
+            }
+          }
         }
       }
     }
@@ -1123,6 +1209,7 @@ footer {
     }
   }
 }
+
 @media (max-width: 320px) {
   main {
     .main_presentBlock {
