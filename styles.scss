@@ -25,9 +25,10 @@ header {
   flex-direction: column;
   width: 100%;
   height: auto;
-  position: fixed;
+  position: sticky;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  z-index: 10000;
 
   .header_contactsBlock {
     width: 100%;
@@ -603,11 +604,11 @@ main {
           align-items: center;
           justify-content: center;
           width: 100%;
-          height: 15%;
+          max-height: 15%;
+          overflow: hidden;
           background-color: #f9552d;
           transition: all 0.6s;
           opacity: 1;
-          visibility: visible;
 
           h2 {
             font-size: calc(23px + 7 * (100vw / 1912));
@@ -665,9 +666,8 @@ main {
             opacity: 1;
           }
           .elem_nameCourse {
-            display: none;
+            max-height: 0;
             opacity: 0;
-            visibility: hidden;
           }
         }
         &:active {
@@ -675,9 +675,8 @@ main {
             opacity: 1;
           }
           .elem_nameCourse {
-            display: none;
+            max-height: 0;
             opacity: 0;
-            visibility: hidden;
           }
         }
       }

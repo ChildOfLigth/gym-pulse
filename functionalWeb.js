@@ -1,3 +1,7 @@
+const fullHeight = document.documentElement.scrollHeight;
+console.log('Полная высота страницы:', fullHeight);
+
+
 const menu_burger = document.querySelector(".navigateBlock_menuBurger");
 const blockWithLinks = document.querySelector(
   ".navigateBlock_hiddenBlockWithLinks"
