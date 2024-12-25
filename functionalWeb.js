@@ -177,7 +177,7 @@ window.addEventListener("DOMContentLoaded", function () {
     let classForContainerForCards;
     let classForCard;
 
-    if (window.innerWidth <= 720) {
+    if (window.innerWidth <= 640) {
       classForContainer = "swiper";
       classForContainerForCards = "swiper-wrapper";
       classForCard = "swiper-slide";

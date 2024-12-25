@@ -17,13 +17,6 @@ header {
   top: 0;
   z-index: 1000;
 }
-header::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: white;
-}
 header .header_contactsBlock {
   width: 100%;
   background-color: black;
@@ -455,7 +448,7 @@ main .main_wrapperOurTrainers .swiper .swiper-wrapper .swiper-slide .card_textPa
   margin: 0;
   padding: 0;
   text-align: center;
-  font-size: calc(23px + 0.3661087866vw);
+  font-size: calc(33px + 0.7322175732vw);
   color: #4d0000;
   font-weight: 600;
   line-height: 1.2;
@@ -652,11 +645,12 @@ main .main_ourCourses .ourCourses_textPart h2 {
   position: relative;
 }
 main .main_ourCourses .ourCourses_listCourse {
-  width: 90%;
+  width: 80%;
   height: auto;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
+  grid-template-columns: repeat(3, 1fr);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -672,6 +666,7 @@ main .main_ourCourses .ourCourses_listCourse .listCourse_elem {
   max-height: 620px;
   border: 5px solid #1a1a1a;
   position: relative;
+  overflow: hidden;
 }
 main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_nameCourse {
   display: -webkit-box;
@@ -686,6 +681,10 @@ main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_nameCourse {
   width: 100%;
   height: 15%;
   background-color: #f9552d;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  opacity: 1;
+  visibility: visible;
 }
 main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_nameCourse h2 {
   font-size: calc(23px + 0.3661087866vw);
@@ -695,7 +694,7 @@ main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_nameCourse h
 }
 main .main_ourCourses .ourCourses_listCourse .listCourse_elem img {
   width: 100%;
-  height: 85%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -703,16 +702,15 @@ main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_aboutCourse 
   opacity: 0;
   text-align: center;
   position: absolute;
-  top: 15%;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 85%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_aboutCourse .aboutCourse_textPart {
-  width: 92%;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -728,18 +726,36 @@ main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_aboutCourse 
       -ms-flex-pack: center;
           justify-content: center;
   margin: 50px auto;
+  position: relative;
+  top: 3%;
 }
 main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_aboutCourse .aboutCourse_textPart h3 {
   font-size: calc(22px + 0.3138075314vw);
   margin-bottom: 15px;
   text-transform: uppercase;
+  line-height: 30px;
+  width: 98%;
 }
 main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_aboutCourse .aboutCourse_textPart p {
   font-size: calc(21px + 0.2615062762vw);
   line-height: 36px;
+  width: 92%;
 }
 main .main_ourCourses .ourCourses_listCourse .listCourse_elem:hover .elem_aboutCourse {
   opacity: 1;
+}
+main .main_ourCourses .ourCourses_listCourse .listCourse_elem:hover .elem_nameCourse {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+main .main_ourCourses .ourCourses_listCourse .listCourse_elem:active .elem_aboutCourse {
+  opacity: 1;
+}
+main .main_ourCourses .ourCourses_listCourse .listCourse_elem:active .elem_nameCourse {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 main .main_passes {
   width: 90%;
@@ -993,8 +1009,9 @@ main .main_scrollTop {
   border: none;
   border-radius: 4px;
   position: fixed;
-  left: 93%;
   top: 83%;
+  right: 40px;
+  margin-left: auto;
   -webkit-box-shadow: 2px 2px 7px #1a1a1a;
           box-shadow: 2px 2px 7px #1a1a1a;
   -webkit-transition: all 0.4s;
@@ -1019,7 +1036,7 @@ footer .footer_content h3 {
   color: white;
   font-size: calc(29px + 0.679916318vw);
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 27px;
 }
 footer .footer_content h3 span {
   color: #f9552d;
@@ -1122,6 +1139,11 @@ footer .footer_content .content_listPageNavigation li a:hover {
     background-color: #f9552d;
   }
 }
+@media (max-width: 1415px) {
+  main .main_ourCourses .ourCourses_listCourse {
+    width: 94%;
+  }
+}
 @media (max-width: 1366px) {
   header .navigationBlock .navigationBlock_content .navigateBlock_pageNavigation {
     width: 60%;
@@ -1144,6 +1166,48 @@ footer .footer_content .content_listPageNavigation li a:hover {
   }
   main .main_contactsAndschedule .contactsAndschedule_content iframe {
     width: 100%;
+  }
+}
+@media (max-width: 1183px) {
+  main .main_wrapperOurTrainers .main_ourTrainers {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card {
+    width: 23%;
+    height: 500px;
+    max-width: 650px;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+  }
+  main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card:hover {
+    width: 55%;
   }
 }
 @media (max-width: 1149px) {
@@ -1187,28 +1251,22 @@ footer .footer_content .content_listPageNavigation li a:hover {
   main .main_aboutUs .aboutUs_imgsBlock img:nth-child(2) {
     display: none;
   }
-  main .main_ourCourses {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  main .main_wrapperOurTrainers .main_ourTrainers {
+    width: 100%;
+    margin: 0 auto;
   }
-  main .main_ourCourses .ourCourses_listCourse {
-    width: 80%;
-    display: -ms-grid;
-    display: grid;
+  main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
-  main .main_ourCourses .ourCourses_listCourse .listCourse_elem {
-    width: 100%;
-    min-width: 300px;
-    height: 430px;
+  main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card {
+    width: 45%;
+  }
+  main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card:hover {
+    width: 50%;
   }
   main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList .closeModalWindow {
     top: 14px;
@@ -1218,6 +1276,18 @@ footer .footer_content .content_listPageNavigation li a:hover {
 @media (max-width: 828px) {
   header .header_contactsBlock {
     display: none;
+  }
+  main .main_ourCourses .ourCourses_listCourse {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    width: 75%;
+  }
+  main .main_ourCourses .ourCourses_listCourse .listCourse_elem {
+    width: 100%;
+    min-width: 300px;
+    height: 430px;
   }
 }
 @media (max-width: 675px) {
@@ -1233,9 +1303,17 @@ footer .footer_content .content_listPageNavigation li a:hover {
   }
 }
 @media (max-width: 645px) {
+  main .main_wrapperOurTrainers .swiper .swiper-wrapper {
+    margin: 0 auto;
+  }
   main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList .closeModalWindow {
     top: 20px;
     left: 80%;
+  }
+}
+@media (max-width: 590px) {
+  main .main_ourCourses .ourCourses_listCourse .listCourse_elem {
+    height: 500px;
   }
 }
 @media (max-width: 510px) {
@@ -1251,8 +1329,27 @@ footer .footer_content .content_listPageNavigation li a:hover {
   main .main_aboutUs .aboutUs_textPart {
     width: 100%;
   }
+  main .main_ourCourses .ourCourses_listCourse .listCourse_elem {
+    height: 580px;
+  }
+}
+@media (max-width: 530px) {
+  footer .footer_content {
+    width: 70%;
+  }
+}
+@media (max-width: 400px) {
+  main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_aboutCourse .aboutCourse_textPart {
+    position: relative;
+    top: 0;
+  }
 }
 @media (max-width: 396px) {
+  .header .navigationBlock .navigationBlock_content .navigateBlock_hiddenBlockWithLinks .content {
+    width: 100%;
+    margin: 0;
+    line-height: 30px;
+  }
   main .main_aboutUs .aboutUs_textPart {
     width: 100%;
   }
@@ -1281,6 +1378,33 @@ footer .footer_content .content_listPageNavigation li a:hover {
   }
   main .main_contactsAndschedule .contactsAndschedule_content iframe {
     width: 100%;
+  }
+  main .main_ourCourses .ourCourses_textPart {
+    width: 80%;
+  }
+  main .main_ourCourses .ourCourses_textPart h2 {
+    margin-bottom: 30px;
+  }
+  main .main_ourCourses .ourCourses_listCourse {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .main_ourCourses .ourCourses_listCourse .listCourse_elem {
+    width: 50%;
+  }
+  footer .footer_content {
+    width: 90%;
   }
 }
 @media (max-width: 320px) {
