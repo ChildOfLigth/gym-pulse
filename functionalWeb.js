@@ -211,7 +211,6 @@ window.addEventListener("DOMContentLoaded", function () {
     if (classForContainer === "swiper") {
       swiperInstance = new Swiper(".swiper", {
         slidesPerView: 1,
-        spaceBetween: 30,
         direction: "horizontal",
         loop: true,
         centeredSlides: true,

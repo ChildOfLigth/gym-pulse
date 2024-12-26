@@ -1,8 +1,4 @@
 @charset "UTF-8";
-main {
-  z-index: 1;
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,7 +162,7 @@ header .navigationBlock .navigationBlock_content .navigateBlock_menuBurger {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 70px;
+  width: 50px;
   height: 100%;
   position: relative;
   top: 50%;
@@ -336,18 +332,6 @@ main .main_aboutUs .aboutUs_textPart h2 {
   margin-bottom: 25px;
   position: relative;
 }
-main .main_aboutUs .aboutUs_textPart h2::before {
-  content: "";
-  content: "";
-  position: absolute;
-  left: 0;
-  -webkit-transform: none;
-          transform: none;
-  bottom: -9px;
-  width: 21%;
-  height: 4px;
-  background-color: #f9552d;
-}
 main .main_aboutUs .aboutUs_textPart p {
   font-size: calc(22px + 0.3138075314vw);
   color: #1a1a1a;
@@ -406,7 +390,12 @@ main .main_wrapperOurTrainers .swiper .swiper-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 main .main_wrapperOurTrainers .swiper .swiper-wrapper .swiper-slide {
   display: -webkit-box;
@@ -680,11 +669,12 @@ main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_nameCourse {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  height: 15%;
   max-height: 15%;
   overflow: hidden;
   background-color: #f9552d;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   opacity: 1;
 }
 main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_nameCourse h2 {
@@ -1009,7 +999,7 @@ main .main_scrollTop {
   border-radius: 4px;
   position: fixed;
   top: 83%;
-  right: 40px;
+  right: 20px;
   margin-left: auto;
   -webkit-box-shadow: 2px 2px 7px #1a1a1a;
           box-shadow: 2px 2px 7px #1a1a1a;
@@ -1057,7 +1047,7 @@ footer .footer_content .content_listPageNavigation li a:hover {
 }
 
 @media (max-width: 1710px) {
-  .main_ourCourses .ourCourses_listCourse {
+  main .main_ourCourses .ourCourses_listCourse {
     width: 100%;
   }
 }
@@ -1124,18 +1114,6 @@ footer .footer_content .content_listPageNavigation li a:hover {
   }
   main .main_aboutUs .aboutUs_textPart {
     width: 80%;
-  }
-  main .main_aboutUs .aboutUs_textPart h2::before {
-    content: "";
-    content: "";
-    position: absolute;
-    left: 0;
-    -webkit-transform: none;
-            transform: none;
-    bottom: -9px;
-    width: 20%;
-    height: 4px;
-    background-color: #f9552d;
   }
 }
 @media (max-width: 1415px) {
