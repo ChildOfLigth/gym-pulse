@@ -39,6 +39,7 @@ body {
   -webkit-text-size-adjust: 100%;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 input,

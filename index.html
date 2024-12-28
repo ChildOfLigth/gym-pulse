@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="nullifyingStyles.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <title>GymPulse</title>
   </head>
   <body>
@@ -48,7 +47,7 @@
             <span></span><span></span><span></span>
           </div>
           <div class="navigateBlock_hiddenBlockWithLinks">
-            <img src="imgs/close.png" alt="" class="closeMenuBurger">
+            <img src="imgs/close.png" alt="" class="closeMenuBurger" />
             <div class="content">
               <a href="#main_ourTrainers">Наши тренера</a>
               <a href="#main_ourCourses">Методы тренировки</a>
@@ -66,7 +65,10 @@
             srcset="imgs/presentPhotoForSmallScreenSizes.webp"
             media="(max-width: 500px)"
           />
-          <source srcset="imgs/presentPhotoFor1000.webp" media="(max-width: 1000px)">
+          <source
+            srcset="imgs/presentPhotoFor1000.webp"
+            media="(max-width: 1000px)"
+          />
           <img src="imgs/presentPhoto.jpg" alt="" />
         </picture>
         <div class="presentBlock_textPart">
@@ -229,128 +231,7 @@
         </ul>
       </div>
 
-      <div class="main_passes" id="main_passes">
-        <h2>Абонементы</h2>
-
-        <ul class="passes_seasonTicketList">
-          <li class="seasonTicketList_card">
-            <div class="card_name">
-              <h3>Стартовый</h3>
-            </div>
-            <div class="card_textPart">
-              <p><span>800грн</span> / 1 месяц</p>
-
-              <p>
-                Это идеальный выбор для начинающих. С Вами будет заниматься
-                профессионал, что бы помочь со всем разобраться
-              </p>
-            </div>
-            <a class="card_buttonDetails">
-              <span data-text="Подробнее">Подробнее</span>
-            </a>
-
-            <ul class="card_modalWindWithFeatureList">
-              <button class="closeModalWindow">
-                <img src="imgs/close.png" alt="" />
-              </button>
-              <h3>Вам доступно:</h3>
-              <li>Доступны все методы тренировки</li>
-              <li>Индивидуальные тренировки</li>
-              <li>Отдых после тренировок(масаж, сауна и т.д) 1 раз в неделю</li>
-              <li>Возможность посещать зал в любое время его работы.</li>
-            </ul>
-          </li>
-
-          <li class="seasonTicketList_card">
-            <div class="card_name">
-              <h3>Энергия в группе</h3>
-            </div>
-            <div class="card_textPart">
-              <p><span>1300грн</span> / 3 месяца</p>
-
-              <p>
-                Выбор для тех, кто хочет заняться спортом в группе. В рамках
-                этого абонемента вы сможете участвовать в различных групповых
-                тренировках
-              </p>
-            </div>
-            <a class="card_buttonDetails">
-              <span data-text="Подробнее">Подробнее</span>
-            </a>
-
-            <ul class="card_modalWindWithFeatureList">
-              <button class="closeModalWindow">
-                <img src="imgs/close.png" alt="" />
-              </button>
-              <h3>Вам доступно:</h3>
-              <li>
-                Безлимитное посещение групповых тренировок (йога, кроссфит и
-                т.д)
-              </li>
-              <li>Возможность посещать зал в любое время его работы.</li>
-              <li>
-                Отдых после тренировок(масаж, сауна и т.д) 2 раза в неделю
-              </li>
-            </ul>
-          </li>
-
-          <li class="seasonTicketList_card">
-            <div class="card_name">
-              <h3>Свободный график</h3>
-            </div>
-            <div class="card_textPart">
-              <p><span>150грн</span> / час</p>
-
-              <p>
-                Этот абонемент позволяет посещать занятия в удобное для вас
-                время, без жесткой привязки к расписанию
-              </p>
-            </div>
-            <a class="card_buttonDetails">
-              <span data-text="Подробнее">Подробнее</span>
-            </a>
-
-            <ul class="card_modalWindWithFeatureList">
-              <button class="closeModalWindow">
-                <img src="imgs/close.png" alt="" />
-              </button>
-              <h3>Вам доступно:</h3>
-              <li>Доступны все методы кроме групповых</li>
-              <li>Возможность посещать зал в любое время его работы.</li>
-              <li>Индивидуальные тренировки</li>
-            </ul>
-          </li>
-
-          <li class="seasonTicketList_card">
-            <div class="card_name">
-              <h3>Максимум</h3>
-            </div>
-            <div class="card_textPart">
-              <p><span>2400грн</span> / 8 месяцев</p>
-
-              <p>
-                Этот абонемент для тех, кто хочет всерьез заняться спортом без
-                ограничений и с полным комфортом
-              </p>
-            </div>
-            <a class="card_buttonDetails">
-              <span data-text="Подробнее">Подробнее</span>
-            </a>
-
-            <ul class="card_modalWindWithFeatureList">
-              <button class="closeModalWindow">
-                <img src="imgs/close.png" alt="" />
-              </button>
-              <h3>Вам доступно:</h3>
-              <li>Доступны все методы тренировки</li>
-              <li>Отдых после тренировок(масаж, сауна и т.д) каждый день</li>
-              <li>Возможность заморозить абонемент до 2-ух недель</li>
-              <li>Участие в любых групповых тренировках</li>
-              <li>Индивидуальные тренировки</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+      <div class="main_passes" id="main_passes"><h2>Абонементы</h2></div>
 
       <div class="main_contactsAndschedule">
         <h2>Геолокация и методы связи</h2>

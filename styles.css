@@ -296,6 +296,7 @@ main .main_aboutUs {
   justify-items: center;
   gap: 20px;
   margin: 150px auto;
+  max-width: 1700px;
 }
 main .main_aboutUs .aboutUs_imgsBlock {
   display: -webkit-box;
@@ -438,7 +439,7 @@ main .main_wrapperOurTrainers .swiper .swiper-wrapper .swiper-slide .card_textPa
   margin: 0;
   padding: 0;
   text-align: center;
-  font-size: calc(33px + 0.7322175732vw);
+  font-size: calc(26px + 0.5230125523vw);
   color: #4d0000;
   font-weight: 600;
   line-height: 1.2;
@@ -757,7 +758,165 @@ main .main_passes h2 {
   text-align: center;
   font-weight: 600;
 }
-main .main_passes .passes_seasonTicketList {
+main .main_passes .swiper-passes {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .main_passes .swiper-passes .swiper-wrapper {
+  width: 100%;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide {
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 5px solid #1a1a1a;
+  min-height: 400px;
+  position: relative;
+  margin-right: 13px;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_name {
+  width: 100%;
+  background-color: #f9552d;
+  color: #1a1a1a;
+  font-size: calc(22px + 0.3138075314vw);
+  font-weight: 600;
+  text-align: center;
+  padding: 20px 0;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_textPart {
+  padding: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_textPart p {
+  font-size: calc(21px + 0.2615062762vw);
+  color: #1a1a1a;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_textPart p span {
+  color: #f9552d;
+  font-weight: 600;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_textPart p:nth-child(1) {
+  font-size: calc(24px + 0.4184100418vw);
+  text-align: center;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_buttonDetails {
+  background-color: white;
+  border-radius: 20px;
+  width: 70%;
+  min-width: 150px;
+  border: 2px solid #f9552d;
+  margin: 0px auto 20px auto;
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_buttonDetails span {
+  font-size: calc(23px + 0.3661087866vw);
+  color: #1a1a1a;
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_buttonDetails:hover span {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_buttonDetails:hover span::before {
+  content: attr(data-text);
+  position: absolute;
+  color: #1a1a1a;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_buttonDetails:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f9552d;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_buttonDetails:hover::before {
+  height: 100%;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_modalWindWithFeatureList {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50%;
+  min-width: 300px;
+  height: auto;
+  padding: 30px;
+  background-color: white;
+  z-index: 1000;
+  border-radius: 5px;
+  -webkit-box-shadow: -5px 5px 10px #1a1a1a;
+          box-shadow: -5px 5px 10px #1a1a1a;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_modalWindWithFeatureList .closeModalWindow {
+  border: none;
+  position: absolute;
+  top: 12px;
+  left: 94%;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_modalWindWithFeatureList .closeModalWindow img {
+  width: 40px;
+  min-width: 20px;
+  height: auto;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_modalWindWithFeatureList h3 {
+  color: #f9552d;
+  font-size: calc(22px + 0.3138075314vw);
+  margin-bottom: 10px;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_modalWindWithFeatureList li {
+  font-size: calc(21px + 0.2615062762vw);
+  line-height: 34px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 30px;
+}
+main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_modalWindWithFeatureList li::before {
+  content: url("imgs/checked.png");
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+main .main_passes .passes_content .passes_seasonTicketList {
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -765,7 +924,7 @@ main .main_passes .passes_seasonTicketList {
   gap: 30px;
   margin: 70px auto;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card {
   width: 100%;
   background-color: white;
   border-radius: 3px;
@@ -783,7 +942,7 @@ main .main_passes .passes_seasonTicketList .seasonTicketList_card {
   min-height: 400px;
   position: relative;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_name {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_name {
   width: 100%;
   background-color: #f9552d;
   color: #1a1a1a;
@@ -792,27 +951,27 @@ main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_name {
   text-align: center;
   padding: 20px 0;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_textPart {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_textPart {
   padding: 20px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_textPart p {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_textPart p {
   font-size: calc(21px + 0.2615062762vw);
   color: #1a1a1a;
   line-height: 40px;
   margin-bottom: 10px;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_textPart p span {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_textPart p span {
   color: #f9552d;
   font-weight: 600;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_textPart p:nth-child(1) {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_textPart p:nth-child(1) {
   font-size: calc(24px + 0.4184100418vw);
   text-align: center;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_buttonDetails {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_buttonDetails {
   background-color: white;
   border-radius: 20px;
   width: 70%;
@@ -827,20 +986,20 @@ main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_buttonDe
   text-decoration: none;
   text-align: center;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_buttonDetails span {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_buttonDetails span {
   font-size: calc(23px + 0.3661087866vw);
   color: #1a1a1a;
   display: inline-block;
   position: relative;
   padding: 10px 20px;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_buttonDetails:hover span {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_buttonDetails:hover span {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_buttonDetails:hover span::before {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_buttonDetails:hover span::before {
   content: attr(data-text);
   position: absolute;
   color: #1a1a1a;
@@ -852,7 +1011,7 @@ main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_buttonDe
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_buttonDetails:before {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_buttonDetails:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -863,10 +1022,10 @@ main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_buttonDe
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_buttonDetails:hover::before {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_buttonDetails:hover::before {
   height: 100%;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList {
   display: none;
   position: fixed;
   top: 50%;
@@ -883,30 +1042,30 @@ main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_modalWin
   -webkit-box-shadow: -5px 5px 10px #1a1a1a;
           box-shadow: -5px 5px 10px #1a1a1a;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList .closeModalWindow {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList .closeModalWindow {
   border: none;
   position: absolute;
   top: 12px;
   left: 94%;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList .closeModalWindow img {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList .closeModalWindow img {
   width: 40px;
   min-width: 20px;
   height: auto;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList h3 {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList h3 {
   color: #f9552d;
   font-size: calc(22px + 0.3138075314vw);
   margin-bottom: 10px;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList li {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList li {
   font-size: calc(21px + 0.2615062762vw);
   line-height: 34px;
   margin-bottom: 10px;
   position: relative;
   padding-left: 30px;
 }
-main .main_passes .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList li::before {
+main .main_passes .passes_content .passes_seasonTicketList .seasonTicketList_card .card_modalWindWithFeatureList li::before {
   content: url("imgs/checked.png");
   position: absolute;
   left: 0;
@@ -1268,6 +1427,48 @@ footer .footer_content .content_listPageNavigation li a:hover {
   }
 }
 @media (max-width: 675px) {
+  main .main_wrapperOurTrainers {
+    background-color: #1a1a1a;
+    font-family: "Roboto", sans-serif;
+    padding: 50px 0 120px 0;
+    width: 100%;
+    height: auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0 auto;
+  }
+  main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+    min-height: 200px;
+    margin-bottom: 10px;
+  }
+  main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card:hover {
+    width: 90%;
+    height: 560px;
+  }
+  main .main_wrapperOurTrainers .main_ourTrainers .ourTrainers_listCard .listCard_card:active {
+    width: 90%;
+    height: 560px;
+  }
   main .main_presentBlock {
     height: 470px;
   }
