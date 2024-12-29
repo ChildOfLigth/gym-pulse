@@ -146,7 +146,7 @@ window.addEventListener("DOMContentLoaded", function () {
     let classForContainerForCards;
     let classForCard;
 
-    if (window.innerWidth <= 450) {
+    if (window.innerWidth <= 500) {
       classForContainer = "swiper";
       classForContainerForCards = "swiper-wrapper";
       classForCard = "swiper-slide";
@@ -173,24 +173,15 @@ window.addEventListener("DOMContentLoaded", function () {
       classForCard
     );
 
-    if (classForContainer === "swiper") {
-      swiperForListTrainers = new Swiper(".swiper", {
-        slidesPerView: 1,
-        direction: "horizontal",
-        loop: true,
-        centeredSlides: true,
-        effect: "slide",
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        scrollbar: {
-          el: ".swiper-scrollbar",
-          draggable: true,
-          snapOnRelease: true,
-        },
-      });
-    }
+    swiperForListTrainers = new Swiper(".swiper", {
+      slidesPerView: 1,
+      direction: "horizontal",
+      loop: true,
+      centeredSlides: true,
+      pagination: { el: ".swiper-pagination", clickable: true },
+      scrollbar: { el: ".swiper-scrollbar", draggable: true },
+    });
+    
   }
 
   updateContent();
@@ -351,9 +342,9 @@ window.addEventListener("DOMContentLoaded", function () {
       listPasses.style.display = "grid";
     }
 
-    if (swiperForListTrainers) {
-      swiperForListTrainers.destroy(true, true);
-      swiperForListTrainers = null;
+    if (swiperForPasses) {
+      swiperForPasses.destroy(true, true);
+      swiperForPasses = null;
     }
 
     listFillPassesFunction(classForContainer, classForList, classForCard);

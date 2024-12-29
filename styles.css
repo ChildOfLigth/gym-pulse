@@ -352,15 +352,7 @@ main .main_wrapperOurTrainers {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 auto;
-}
-main .main_wrapperOurTrainers::after {
-  content: "";
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 1px;
-  background-color: white;
+  position: relative;
 }
 main .main_wrapperOurTrainers h2 {
   font-size: calc(34px + 0.9414225941vw);
@@ -386,6 +378,7 @@ main .main_wrapperOurTrainers .swiper {
   position: relative;
   margin: 0 auto;
   width: 100%;
+  z-index: 999;
 }
 main .main_wrapperOurTrainers .swiper .swiper-wrapper {
   display: -webkit-box;
@@ -763,6 +756,8 @@ main .main_passes .swiper-passes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  z-index: 999;
 }
 main .main_passes .swiper-passes .swiper-wrapper {
   width: 100%;
@@ -1164,6 +1159,7 @@ main .main_scrollTop {
           box-shadow: 2px 2px 7px #1a1a1a;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  z-index: 1000;
 }
 main .main_scrollTop.visible {
   visibility: visible;
@@ -1510,6 +1506,15 @@ footer .footer_content .content_listPageNavigation li a:hover {
   main .main_ourCourses .ourCourses_listCourse .listCourse_elem {
     height: 580px;
   }
+  main .main_scrollTop {
+    width: 40px;
+    height: 40px;
+    right: 10px;
+  }
+  main .main_scrollTop img {
+    width: 20px;
+    height: 20px;
+  }
 }
 @media (max-width: 530px) {
   footer .footer_content {
@@ -1520,6 +1525,10 @@ footer .footer_content .content_listPageNavigation li a:hover {
   main .main_ourCourses .ourCourses_listCourse .listCourse_elem .elem_aboutCourse .aboutCourse_textPart {
     position: relative;
     top: 0;
+  }
+  main .main_passes .swiper-passes .swiper-wrapper .swiper-slide {
+    height: 350px;
+    overflow: auto;
   }
 }
 @media (max-width: 396px) {
