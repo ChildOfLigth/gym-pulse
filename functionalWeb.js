@@ -136,7 +136,6 @@ window.addEventListener("DOMContentLoaded", function () {
           </div>
         </div>
         <div class="swiper-pagination"></div>
-        <div class="swiper-scrollbar"></div>
       </div>
     `;
   }
@@ -147,7 +146,7 @@ window.addEventListener("DOMContentLoaded", function () {
     let classForCard;
 
     if (window.innerWidth <= 500) {
-      classForContainer = "swiper";
+      classForContainer = "swiper-trainers";
       classForContainerForCards = "swiper-wrapper";
       classForCard = "swiper-slide";
 
@@ -173,15 +172,14 @@ window.addEventListener("DOMContentLoaded", function () {
       classForCard
     );
 
-    swiperForListTrainers = new Swiper(".swiper", {
+    swiperForListTrainers = new Swiper(".swiper-trainers", {
       slidesPerView: 1,
+      spaceBetween: 10,
       direction: "horizontal",
       loop: true,
       centeredSlides: true,
-      pagination: { el: ".swiper-pagination", clickable: true },
-      scrollbar: { el: ".swiper-scrollbar", draggable: true },
+      pagination: { el: ".swiper-pagination", dynamicBullets: true },
     });
-    
   }
 
   updateContent();

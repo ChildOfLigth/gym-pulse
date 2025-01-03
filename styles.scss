@@ -126,6 +126,7 @@ header {
         height: 100%;
         position: relative;
         top: 50%;
+        cursor: pointer;
 
         span {
           width: 100%;
@@ -156,13 +157,14 @@ header {
           visibility: hidden;
         }
 
-        img {
+        .closeMenuBurger {
           width: 25px;
           height: auto;
           position: absolute;
           left: 90%;
           top: 20px;
           filter: invert(1);
+          cursor: pointer;
         }
 
         .content {
@@ -195,7 +197,6 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1 0 0;
-  margin: 0 auto;
   .main_presentBlock {
     position: relative;
     width: 100%;
@@ -308,26 +309,24 @@ main {
       font-weight: 600;
       margin-bottom: 50px;
       position: relative;
+      text-align: center;
     }
 
-    .swiper {
+    .swiper-trainers {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       position: relative;
+      width: 90%;
       margin: 0 auto;
-      width: 100%;
-      z-index: 999;
       .swiper-wrapper {
         display: flex;
-        align-items: center;
-        justify-content: start;
-
+        width: 100%;
         .swiper-slide {
           display: flex;
           flex-direction: column;
-          width: 400px;
+          width: 90%;
           min-height: 670px;
           border-radius: 10px;
           cursor: pointer;
@@ -353,7 +352,7 @@ main {
               margin: 0;
               padding: 0;
               text-align: center;
-              font-size: calc(26px + 10 * (100vw / 1912));
+              font-size: calc(23px + 7 * (100vw / 1912));
               color: #4d0000;
               font-weight: 600;
               line-height: 1.2;
@@ -427,7 +426,7 @@ main {
       .ourTrainers_listCard {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 15px;
+        gap: 20px;
         width: 90%;
         margin: 0 auto;
 
@@ -664,15 +663,23 @@ main {
       color: #1a1a1a;
       text-align: center;
       font-weight: 600;
+      z-index: 1000;
+    }
+
+    a {
+      cursor: pointer;
     }
 
     .swiper-passes {
       width: 90%;
       display: flex;
+      flex-direction: column;
       position: relative;
       z-index: 999;
       .swiper-wrapper {
         width: 100%;
+        display: flex;
+        margin-top: 70px;
         .swiper-slide {
           width: 100%;
           background-color: white;
@@ -684,6 +691,7 @@ main {
           min-height: 400px;
           position: relative;
           margin-right: 13px;
+          user-select: none;
 
           .card_name {
             width: 100%;
@@ -846,6 +854,7 @@ main {
           border: 5px solid #1a1a1a;
           min-height: 400px;
           position: relative;
+          user-select: none;
 
           .card_name {
             width: 100%;
@@ -1238,17 +1247,18 @@ footer {
   main {
     .main_wrapperOurTrainers {
       .main_ourTrainers {
-        width: 100%;
+        width: 90%;
         display: flex;
         flex-direction: row;
         align-items: center;
         .ourTrainers_listCard {
-          width: 90%;
+          width: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-wrap: nowrap;
-          flex-grow: 0;
+          flex-shrink: 0;
+          margin: 0 auto;
           .listCard_card {
             width: 23%;
             height: 500px;
@@ -1329,16 +1339,67 @@ footer {
     }
 
     .main_wrapperOurTrainers {
+      width: 100%;
+      padding: 50px 0;
+
       .main_ourTrainers {
-        width: 100%;
-        margin: 0 auto;
+        display: flex;
+
         .ourTrainers_listCard {
-          flex-wrap: wrap;
-          flex-grow: 1;
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+          width: 90%;
+          position: relative;
+
           .listCard_card {
-            width: 45%;
+            width: 25%;
+            height: 320px !important;
+            min-height: 320px;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+
+            .card_textPart {
+              display: none;
+            }
+
+            .card_aboutTheCoach {
+              height: 100%;
+              padding: 0;
+
+              .aboutTheCoach_textPart {
+                margin: 18px 10px;
+
+                p {
+                  font-size: calc(18px + 2 * (100vw / 1912));
+                }
+
+                ul {
+                  padding-bottom: 15px;
+
+                  h4 {
+                    font-size: calc(18px + 2 * (100vw / 1912));
+                  }
+
+                  li {
+                    line-height: 27px;
+                    font-size: calc(17px + 1 * (100vw / 1912));
+                  }
+                }
+              }
+            }
+
             &:hover {
-              width: 50%;
+              width: 100%;
+              height: 100%;
+              min-width: 100%;
             }
           }
         }
@@ -1377,58 +1438,6 @@ footer {
           width: 100%;
           min-width: 300px;
           height: 430px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 675px) {
-  main {
-    .main_wrapperOurTrainers {
-      background-color: #1a1a1a;
-      font-family: "Roboto", sans-serif;
-      padding: 50px 0 120px 0;
-      width: 100%;
-      height: auto;
-      box-sizing: border-box;
-      margin: 0 auto;
-
-      .main_ourTrainers {
-        .ourTrainers_listCard {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-
-          .listCard_card {
-            display: flex;
-            flex-direction: column;
-            width: 90%;
-            min-height: 200px;
-            margin-bottom: 10px;
-
-            &:hover {
-              width: 90%;
-              height: 560px;
-            }
-            &:active {
-              width: 90%;
-              height: 560px;
-            }
-          }
-        }
-      }
-    }
-    .main_presentBlock {
-      height: 470px;
-
-      img {
-        filter: grayscale(80%);
-      }
-
-      .presentBlock_textPart {
-        p {
-          line-height: 30px;
         }
       }
     }
@@ -1497,8 +1506,8 @@ footer {
     }
 
     .main_scrollTop {
-      width: 40px;
-      height: 40px;
+      width: 45px;
+      height: 45px;
       right: 10px;
       img {
         width: 20px;
@@ -1535,8 +1544,8 @@ footer {
       .swiper-passes {
         .swiper-wrapper {
           .swiper-slide {
-            height: 350px;
-            overflow: auto;
+            height: 320px;
+            overflow: scroll;
           }
         }
       }
@@ -1593,7 +1602,6 @@ footer {
         }
       }
     }
-
     .main_ourCourses {
       .ourCourses_textPart {
         width: 80%;
@@ -1611,6 +1619,11 @@ footer {
         .listCourse_elem {
           width: 50%;
         }
+      }
+    }
+    .main_contactsAndschedule {
+      h2 {
+        width: 350px;
       }
     }
   }
