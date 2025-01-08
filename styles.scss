@@ -300,8 +300,6 @@ main {
     width: 100%;
     height: auto;
     box-sizing: border-box;
-    margin: 0 auto;
-    position: relative;
 
     h2 {
       font-size: calc(34px + 18 * (100vw / 1912));
@@ -312,125 +310,22 @@ main {
       text-align: center;
     }
 
-    .swiper-trainers {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      width: 90%;
-      margin: 0 auto;
-      .swiper-wrapper {
-        display: flex;
-        width: 100%;
-        .swiper-slide {
-          display: flex;
-          flex-direction: column;
-          width: 90%;
-          min-height: 670px;
-          border-radius: 10px;
-          cursor: pointer;
-          overflow: hidden;
-          position: relative;
-
-          img {
-            width: 100%;
-            height: 85%;
-            object-fit: cover;
-          }
-
-          .card_textPart {
-            height: 15%;
-            background-color: #f9552d;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.5s;
-            width: 100%;
-
-            h3 {
-              margin: 0;
-              padding: 0;
-              text-align: center;
-              font-size: calc(23px + 7 * (100vw / 1912));
-              color: #4d0000;
-              font-weight: 600;
-              line-height: 1.2;
-              overflow: hidden;
-            }
-          }
-
-          .card_aboutTheCoach {
-            position: absolute;
-            background-color: rgb(0 0 0 / 0.7);
-            width: 100%;
-            height: 85%;
-            padding: 20px;
-            color: white;
-            opacity: 0;
-            transition: all 0.5s;
-            overflow: hidden;
-
-            .aboutTheCoach_textPart {
-              width: 90%;
-              height: 100%;
-
-              p {
-                font-size: calc(22px + 6 * (100vw / 1912));
-                line-height: 30px;
-                margin-bottom: 13px;
-
-                span {
-                  color: #f9552d;
-                }
-              }
-
-              ul {
-                margin: 15px 0;
-                list-style: none;
-
-                h4 {
-                  font-size: calc(23px + 7 * (100vw / 1912));
-                  margin-bottom: 10px;
-                  color: #f9552d;
-                }
-
-                li {
-                  line-height: 37px;
-                  font-size: calc(22px + 6 * (100vw / 1912));
-
-                  &::before {
-                    content: "— ";
-                  }
-                }
-              }
-            }
-          }
-
-          &:hover {
-            .card_aboutTheCoach {
-              opacity: 1;
-            }
-          }
-        }
-      }
-    }
-
     .main_ourTrainers {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       position: relative;
+      margin: 0 auto;
 
-      .ourTrainers_listCard {
+      .swiper-wrapper {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
         width: 90%;
         margin: 0 auto;
 
-        .listCard_card {
+        .swiper-slide {
           display: flex;
           flex-direction: column;
           width: 100%;
@@ -447,7 +342,7 @@ main {
           }
 
           .card_textPart {
-            height: 15%;
+            height: 15% !important;
             background-color: #f9552d;
             display: flex;
             align-items: center;
@@ -489,6 +384,7 @@ main {
 
                 span {
                   color: #f9552d;
+                  font-weight: 600;
                 }
               }
 
@@ -500,6 +396,7 @@ main {
                   font-size: calc(23px + 7 * (100vw / 1912));
                   margin-bottom: 10px;
                   color: #f9552d;
+                  font-weight: 600;
                 }
 
                 li {
@@ -521,167 +418,410 @@ main {
           }
         }
       }
-    }
-  }
 
-  .main_ourCourses {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("imgs/photoForCoursesBlock.webp");
-    margin: 0 auto;
-    padding: 60px 0;
-
-    .ourCourses_textPart {
-      width: 100%;
-      text-align: center;
-
-      h2 {
-        font-size: $fontSzForH2;
-        font-weight: 600;
-        color: white;
-        margin-bottom: 13px;
-        position: relative;
+      .swiper-pagination {
+        display: none;
       }
     }
 
-    .ourCourses_listCourse {
-      width: 80%;
-      height: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      justify-content: space-between;
+    .swiper-trainers {
+      display: none;
+      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      gap: 30px;
-      margin: 40px auto;
+      position: relative;
+      width: 90%;
+      height: 100%;
+      overflow: hidden;
+      margin: 0 auto;
 
-      .listCourse_elem {
+      .swiper-wrapper {
+        display: flex;
         width: 100%;
-        height: 580px;
-        max-height: 620px;
-        border: 5px solid #1a1a1a;
+        height: 80%;
+        z-index: 1;
+        transition-property: transform;
+        box-sizing: content-box;
+        transform: translate3d(0px, 0, 0);
+        margin: 0 auto;
+      }
+
+      .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 680px;
+        border-radius: 10px;
+        flex-shrink: 0;
         position: relative;
         overflow: hidden;
-
-        .elem_nameCourse {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          height: 15%;
-          max-height: 15%;
-          overflow: hidden;
-          background-color: #f9552d;
-          transition: all 0.5s;
-          opacity: 1;
-
-          h2 {
-            font-size: calc(23px + 7 * (100vw / 1912));
-            color: #4d0000;
-            font-weight: 600;
-            text-align: center;
-          }
-        }
+        cursor: pointer;
 
         img {
           width: 100%;
-          height: 100%;
+          height: 85%;
           object-fit: cover;
         }
 
-        .elem_aboutCourse {
-          opacity: 0;
-          text-align: center;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.7);
+        .card_textPart {
+          height: 15% !important;
+          background-color: #f9552d;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
           transition: all 0.5s;
 
-          .aboutCourse_textPart {
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 50px auto;
-            position: relative;
-            top: 3%;
+          h3 {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: calc(23px + 7 * (100vw / 1912));
+            color: #4d0000;
+            font-weight: 600;
+            line-height: 1.2;
+            overflow: hidden;
+          }
+        }
 
-            h3 {
-              font-size: calc(22px + 6 * (100vw / 1912));
-              margin-bottom: 15px;
-              text-transform: uppercase;
-              line-height: 30px;
-              width: 98%;
-            }
+        .card_aboutTheCoach {
+          position: absolute;
+          background-color: rgba(0, 0, 0, 0.7);
+          width: 100%;
+          height: 85%;
+          padding: 20px;
+          color: white;
+          opacity: 0;
+          transition: all 0.5s;
+          overflow: hidden;
+
+          .aboutTheCoach_textPart {
+            width: 90%;
+            height: 100%;
 
             p {
-              font-size: calc(21px + 5 * (100vw / 1912));
-              line-height: 36px;
-              width: 92%;
+              font-size: calc(22px + 6 * (100vw / 1912));
+              line-height: 30px;
+              margin-bottom: 13px;
+
+              span {
+                color: #f9552d;
+                font-weight: 600;
+              }
+            }
+
+            ul {
+              margin: 15px 0;
+              list-style: none;
+
+              h4 {
+                font-size: calc(23px + 7 * (100vw / 1912));
+                margin-bottom: 10px;
+                color: #f9552d;
+                font-weight: 600;
+              }
+
+              li {
+                line-height: 37px;
+                font-size: calc(22px + 6 * (100vw / 1912));
+
+                &::before {
+                  content: "— ";
+                }
+              }
             }
           }
         }
 
         &:hover {
-          .elem_aboutCourse {
+          .card_aboutTheCoach {
             opacity: 1;
-          }
-          .elem_nameCourse {
-            max-height: 0;
-            opacity: 0;
           }
         }
-        &:active {
-          .elem_aboutCourse {
-            opacity: 1;
-          }
+      }
+
+      .swiper-pagination {
+        display: block;
+      }
+    }
+  }
+
+  .main_wrapperOurCourses {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("imgs/photoForCoursesBlock.webp");
+    margin: 0 auto;
+    padding: 60px 0;
+    box-sizing: border-box;
+
+    h2 {
+      font-size: $fontSzForH2;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 13px;
+      text-align: center;
+    }
+
+    .main_ourCourses {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      .swiper-wrapper {
+        width: 80%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        margin: 40px auto;
+
+        .swiper-slide {
+          width: 100%;
+          height: 580px;
+          max-height: 620px;
+          border: 5px solid #1a1a1a;
+          position: relative;
+          overflow: hidden;
+          cursor: pointer;
+
           .elem_nameCourse {
-            max-height: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 15%;
+            max-height: 15%;
+            overflow: hidden;
+            background-color: #f9552d;
+            transition: all 0.5s;
+            opacity: 1;
+
+            h2 {
+              font-size: calc(23px + 7 * (100vw / 1912));
+              color: #4d0000;
+              font-weight: 600;
+              text-align: center;
+            }
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .elem_aboutCourse {
             opacity: 0;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            transition: all 0.5s;
+
+            .aboutCourse_textPart {
+              color: white;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              margin: 50px auto;
+              position: relative;
+              top: 3%;
+
+              h3 {
+                font-size: calc(22px + 6 * (100vw / 1912));
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                line-height: 30px;
+                width: 98%;
+              }
+
+              p {
+                font-size: calc(21px + 5 * (100vw / 1912));
+                line-height: 36px;
+                width: 92%;
+              }
+            }
+          }
+
+          &:hover {
+            .elem_aboutCourse {
+              opacity: 1;
+            }
+            .elem_nameCourse {
+              max-height: 0;
+              opacity: 0;
+            }
+          }
+          &:active {
+            .elem_aboutCourse {
+              opacity: 1;
+            }
+            .elem_nameCourse {
+              max-height: 0;
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .swiper-courses {
+      display: none;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      width: 80%;
+      height: 100%;
+      overflow: hidden;
+      margin: 0 auto;
+      .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin: 40px auto;
+        z-index: 1;
+        transition-property: transform;
+        box-sizing: content-box;
+        transform: translate3d(0px, 0, 0);
+
+        .swiper-slide {
+          width: 100%;
+          height: 580px;
+          max-height: 620px;
+          border: 5px solid #1a1a1a;
+          position: relative;
+          overflow: hidden;
+          cursor: pointer;
+
+          .elem_nameCourse {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 15%;
+            max-height: 15%;
+            overflow: hidden;
+            background-color: #f9552d;
+            transition: all 0.5s;
+            opacity: 1;
+
+            h2 {
+              font-size: calc(23px + 7 * (100vw / 1912));
+              color: #4d0000;
+              font-weight: 600;
+              text-align: center;
+            }
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .elem_aboutCourse {
+            opacity: 0;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            transition: all 0.5s;
+
+            .aboutCourse_textPart {
+              color: white;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              margin: 50px auto;
+              position: relative;
+              top: 3%;
+
+              h3 {
+                font-size: calc(22px + 6 * (100vw / 1912));
+                font-weight: 600;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                line-height: 30px;
+                width: 98%;
+              }
+
+              p {
+                font-size: calc(21px + 5 * (100vw / 1912));
+                line-height: 36px;
+                width: 92%;
+              }
+            }
+          }
+
+          &:hover {
+            .elem_aboutCourse {
+              opacity: 1;
+            }
+            .elem_nameCourse {
+              max-height: 0;
+              opacity: 0;
+            }
+          }
+          &:active {
+            .elem_aboutCourse {
+              opacity: 1;
+            }
+            .elem_nameCourse {
+              max-height: 0;
+              opacity: 0;
+            }
           }
         }
       }
     }
   }
 
-  .main_passes {
-    width: 90%;
+  .main_wrapperOurPasses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 90px auto;
     height: auto;
-    margin: 65px auto 90px auto;
-
+    width: 100%;
     h2 {
       font-size: $fontSzForH2;
       color: #1a1a1a;
       text-align: center;
       font-weight: 600;
-      z-index: 1000;
     }
 
-    a {
-      cursor: pointer;
-    }
-
-    .swiper-passes {
-      width: 90%;
+    .main_passes {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       position: relative;
-      z-index: 999;
+      margin: 0 auto;
+      width: 90%;
+      a {
+        cursor: pointer;
+      }
       .swiper-wrapper {
         width: 100%;
-        display: flex;
-        margin-top: 70px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin: 50px auto;
         .swiper-slide {
-          width: 100%;
+          width: 90%;
           background-color: white;
           border-radius: 3px;
           display: flex;
@@ -836,15 +976,24 @@ main {
       }
     }
 
-    .passes_content {
-      .passes_seasonTicketList {
+    .swiper-passes {
+      width: 90%;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 0 auto;
+      .swiper-wrapper {
+        display: flex;
+        align-items: stretch;
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        margin: 70px auto;
-
-        .seasonTicketList_card {
+        z-index: 1;
+        transition-property: transform;
+        box-sizing: content-box;
+        transform: translate3d(0px, 0, 0);
+        margin: 50px auto 0 auto;
+        .swiper-slide {
           width: 100%;
           background-color: white;
           border-radius: 3px;
@@ -854,6 +1003,7 @@ main {
           border: 5px solid #1a1a1a;
           min-height: 400px;
           position: relative;
+          margin-right: 13px;
           user-select: none;
 
           .card_name {
@@ -901,6 +1051,7 @@ main {
             overflow: hidden;
             text-decoration: none;
             text-align: center;
+            cursor: pointer;
 
             span {
               font-size: calc(23px + 7 * (100vw / 1912));
@@ -951,8 +1102,8 @@ main {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 50%;
-            min-width: 300px;
+            width: 90%;
+            min-width: 315px;
             height: auto;
             padding: 30px;
             background-color: white;
@@ -964,10 +1115,10 @@ main {
               border: none;
               position: absolute;
               top: 12px;
-              left: 94%;
+              right: 20px;
 
               img {
-                width: 40px;
+                width: 30px;
                 min-width: 20px;
                 height: auto;
               }
@@ -1123,9 +1274,11 @@ footer {
 
 @media (max-width: 1710px) {
   main {
-    .main_ourCourses {
-      .ourCourses_listCourse {
-        width: 100%;
+    .main_wrapperOurCourses {
+      .main_ourCourses {
+        .ourCourses_listCourse {
+          width: 100%;
+        }
       }
     }
   }
@@ -1202,9 +1355,11 @@ footer {
 
 @media (max-width: 1415px) {
   main {
-    .main_ourCourses {
-      .ourCourses_listCourse {
-        width: 94%;
+    .main_wrapperOurCourses {
+      .main_ourCourses {
+        .ourCourses_listCourse {
+          width: 94%;
+        }
       }
     }
   }
@@ -1243,7 +1398,7 @@ footer {
   }
 }
 
-@media (max-width: 1183px) {
+@media (max-width: 1220px) {
   main {
     .main_wrapperOurTrainers {
       .main_ourTrainers {
@@ -1251,21 +1406,24 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
-        .ourTrainers_listCard {
+
+        .swiper-wrapper {
           width: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-wrap: nowrap;
+          flex-grow: 0;
           flex-shrink: 0;
           margin: 0 auto;
-          .listCard_card {
+          .swiper-slide {
             width: 23%;
             height: 500px;
-            max-width: 650px;
             transition: all 0.6s;
+            flex-shrink: 1;
             &:hover {
-              width: 55%;
+              width: 60%;
+              max-width: 60%;
             }
           }
         }
@@ -1288,13 +1446,17 @@ footer {
 
 @media (max-width: 1030px) {
   main {
-    .main_ourCourses {
-      .ourCourses_listCourse {
-        width: 80%;
-        display: flex;
-        flex-wrap: wrap;
-        .listCourse_elem {
-          width: 46%;
+    .main_wrapperOurCourses {
+      background-image: url("imgs/photoForCoursesBlock1030.webp");
+      .main_ourCourses {
+        .swiper-wrapper {
+          width: 80%;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+          .swiper-slide {
+            width: 47%;
+          }
         }
       }
     }
@@ -1340,25 +1502,24 @@ footer {
 
     .main_wrapperOurTrainers {
       width: 100%;
-      padding: 50px 0;
+      padding: 70px 0;
 
       .main_ourTrainers {
         display: flex;
 
-        .ourTrainers_listCard {
+        .swiper-wrapper {
           display: flex;
           flex-wrap: nowrap;
           align-items: center;
           width: 90%;
           position: relative;
 
-          .listCard_card {
+          .swiper-slide {
             width: 25%;
-            height: 320px !important;
-            min-height: 320px;
+            height: 360px;
+            min-height: 360px;
             border-radius: 5px;
-            overflow: hidden;
-            transition: all 0.4s ease;
+            transition: all 0.5s ease;
 
             img {
               width: 100%;
@@ -1398,8 +1559,8 @@ footer {
 
             &:hover {
               width: 100%;
-              height: 100%;
               min-width: 100%;
+              margin: 0 auto;
             }
           }
         }
@@ -1407,15 +1568,39 @@ footer {
     }
 
     .main_passes {
-      .passes_seasonTicketList {
-        .seasonTicketList_card {
-          .card_modalWindWithFeatureList {
-            .closeModalWindow {
-              top: 14px;
-              left: 85%;
+      .swiper-passes {
+        .swiper-wrapper {
+          .swiper-slide {
+            .card_modalWindWithFeatureList {
+              .closeModalWindow {
+                top: 14px;
+                left: 85%;
+              }
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 870px) {
+  main {
+    .main_wrapperOurCourses {
+      background-image: none !important;
+      background-color: #34323a;
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  main {
+    .main_wrapperOurCourses {
+      .main_ourCourses {
+        display: none;
+      }
+      .swiper-courses {
+        display: flex !important;
       }
     }
   }
@@ -1428,18 +1613,27 @@ footer {
     }
   }
   main {
-    .main_ourCourses {
-      .ourCourses_listCourse {
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 75%;
-
-        .listCourse_elem {
-          width: 100%;
-          min-width: 300px;
-          height: 430px;
+    .main_wrapperOurCourses {
+      .main_ourCourses {
+        .ourCourses_listCourse {
+          display: none !important;
         }
       }
+
+      .swiper-courses {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .main_wrapperOurPasses {
+    .main_passes {
+      display: none !important;
+    }
+    .swiper-passes {
+      display: flex;
     }
   }
 }
@@ -1455,12 +1649,14 @@ footer {
     }
 
     .main_passes {
-      .passes_seasonTicketList {
-        .seasonTicketList_card {
-          .card_modalWindWithFeatureList {
-            .closeModalWindow {
-              top: 20px;
-              left: 80%;
+      .swiper-passes {
+        .swiper-wrapper {
+          .swiper-slide {
+            .card_modalWindWithFeatureList {
+              .closeModalWindow {
+                top: 20px;
+                left: 80%;
+              }
             }
           }
         }
@@ -1469,14 +1665,10 @@ footer {
   }
 }
 
-@media (max-width: 590px) {
-  main {
-    .main_ourCourses {
-      .ourCourses_listCourse {
-        .listCourse_elem {
-          height: 500px;
-        }
-      }
+@media (max-width: 530px) {
+  footer {
+    .footer_content {
+      width: 70%;
     }
   }
 }
@@ -1497,14 +1689,6 @@ footer {
       }
     }
 
-    .main_ourCourses {
-      .ourCourses_listCourse {
-        .listCourse_elem {
-          height: 580px;
-        }
-      }
-    }
-
     .main_scrollTop {
       width: 45px;
       height: 45px;
@@ -1517,38 +1701,13 @@ footer {
   }
 }
 
-@media (max-width: 530px) {
-  footer {
-    .footer_content {
-      width: 70%;
+@media (max-width: 500px) {
+  .main_wrapperOurTrainers {
+    .main_ourTrainers {
+      display: none !important;
     }
-  }
-}
-
-@media (max-width: 400px) {
-  main {
-    .main_ourCourses {
-      .ourCourses_listCourse {
-        .listCourse_elem {
-          .elem_aboutCourse {
-            .aboutCourse_textPart {
-              position: relative;
-              top: 0;
-            }
-          }
-        }
-      }
-    }
-
-    .main_passes {
-      .swiper-passes {
-        .swiper-wrapper {
-          .swiper-slide {
-            height: 320px;
-            overflow: scroll;
-          }
-        }
-      }
+    .swiper-trainers {
+      display: flex;
     }
   }
 }
@@ -1579,6 +1738,20 @@ footer {
         }
       }
     }
+    .main_wrapperOurCourses {
+      .swiper-courses {
+        width: 95% !important;
+        .swiper-slide {
+          .elem_aboutCourse {
+            .aboutCourse_textPart {
+              position: relative;
+              top: 0.5% !important;
+              left: inherit;
+            }
+          }
+        }
+      }
+    }
     .main_contactsAndschedule {
       width: 100%;
 
@@ -1600,30 +1773,6 @@ footer {
         iframe {
           width: 100%;
         }
-      }
-    }
-    .main_ourCourses {
-      .ourCourses_textPart {
-        width: 80%;
-        h2 {
-          margin-bottom: 30px;
-        }
-      }
-      .ourCourses_listCourse {
-        width: 80%;
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        justify-content: center;
-        align-items: center;
-        .listCourse_elem {
-          width: 50%;
-        }
-      }
-    }
-    .main_contactsAndschedule {
-      h2 {
-        width: 350px;
       }
     }
   }
