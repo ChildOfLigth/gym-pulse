@@ -978,7 +978,7 @@ main .main_wrapperOurPasses .wrapperOurPasses_titlePart h2 {
   color: #1a1a1a;
   font-weight: 600;
   position: relative;
-  z-index: 1000;
+  z-index: 100;
 }
 main .main_wrapperOurPasses .wrapperOurPasses_titlePart .title-decoration {
   position: absolute;
@@ -1650,6 +1650,14 @@ footer .footer_content .content_listPageNavigation li a:hover {
     width: 75%;
   }
 }
+@media (max-width: 1061px) {
+  main .main_wrapperOurTrainers .main_ourTrainers {
+    width: 100%;
+  }
+  main .main_wrapperOurTrainers .main_ourTrainers .ourCourses_listCourse {
+    width: 100%;
+  }
+}
 @media (max-width: 1030px) {
   main .main_wrapperOurCourses {
     background-image: url("imgs/photoForCoursesBlock1030.webp");
@@ -1700,6 +1708,7 @@ footer .footer_content .content_listPageNavigation li a:hover {
     display: flex;
     width: 100%;
     margin: 0 auto;
+    position: relative;
   }
   main .main_wrapperOurTrainers .main_ourTrainers .swiper-wrapper {
     display: -webkit-box;
@@ -1713,9 +1722,9 @@ footer .footer_content .content_listPageNavigation li a:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    align-items: center;
     width: 90%;
     position: relative;
+    gap: 5px;
   }
   main .main_wrapperOurTrainers .main_ourTrainers .swiper-wrapper .swiper-slide {
     width: 25%;
@@ -1723,8 +1732,6 @@ footer .footer_content .content_listPageNavigation li a:hover {
     min-height: 360px;
     border-radius: 5px;
     -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    position: relative;
     transition: all 0.5s ease;
     z-index: 1;
   }
@@ -1734,8 +1741,8 @@ footer .footer_content .content_listPageNavigation li a:hover {
     -o-object-fit: cover;
        object-fit: cover;
   }
-  main .main_wrapperOurTrainers .main_ourTrainers .swiper-wrapper .swiper-slide .card_textPart {
-    display: none;
+  main .main_wrapperOurTrainers .main_ourTrainers .swiper-wrapper .swiper-slide .card_textPart h3 {
+    font-size: 14px;
   }
   main .main_wrapperOurTrainers .main_ourTrainers .swiper-wrapper .swiper-slide .card_aboutTheCoach {
     height: 100%;
@@ -1745,34 +1752,22 @@ footer .footer_content .content_listPageNavigation li a:hover {
     margin: 18px 10px;
   }
   main .main_wrapperOurTrainers .main_ourTrainers .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart p {
-    font-size: calc(18px + 0.1046025105vw);
+    line-height: 21px;
+    font-size: 14px;
   }
   main .main_wrapperOurTrainers .main_ourTrainers .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul {
     padding-bottom: 15px;
   }
   main .main_wrapperOurTrainers .main_ourTrainers .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul h4 {
-    font-size: calc(18px + 0.1046025105vw);
+    font-size: 14px;
+    margin-bottom: 5px;
   }
   main .main_wrapperOurTrainers .main_ourTrainers .swiper-wrapper .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart ul li {
-    line-height: 27px;
-    font-size: calc(17px + 0.0523012552vw);
+    line-height: 21px;
+    font-size: 14px;
   }
-  main .main_wrapperOurTrainers .main_ourTrainers .swiper-wrapper .swiper-slide:hover {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    width: 80%;
-    height: auto;
-    z-index: 10;
-  }
-  main .main_wrapperOurTrainers .main_ourTrainers .swiper-wrapper .swiper-wrapper .swiper-slide:not(:hover) {
-    opacity: 0.5;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+  main .main_wrapperOurTrainers .main_ourTrainers .swiper-wrapper .swiper-slide:hover .card_textPart {
+    display: none;
   }
   main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_modalWindWithFeatureList .closeModalWindow {
     top: 14px;

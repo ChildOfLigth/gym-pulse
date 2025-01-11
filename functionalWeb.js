@@ -87,7 +87,7 @@ window.addEventListener("DOMContentLoaded", function () {
     centeredSlides: true,
     spaceBetween: 30,
     direction: "horizontal",
-    pagination: { el: ".swiper-pagination"},
+    pagination: { el: ".swiper-pagination" },
   });
 
   const seasonTicketCard = document.querySelectorAll(".swiper-slide");

@@ -866,7 +866,7 @@ main {
         color: #1a1a1a;
         font-weight: 600;
         position: relative;
-        z-index: 1000;
+        z-index: 100;
       }
 
       .title-decoration {
@@ -1535,6 +1535,19 @@ footer {
   }
 }
 
+@media (max-width: 1061px) {
+  main {
+    .main_wrapperOurTrainers {
+      .main_ourTrainers {
+        width: 100%;
+        .ourCourses_listCourse {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1030px) {
   main {
     .main_wrapperOurCourses {
@@ -1597,23 +1610,22 @@ footer {
         display: flex;
         width: 100%;
         margin: 0 auto;
+        position: relative;
 
         .swiper-wrapper {
           display: flex;
           flex-wrap: nowrap;
           align-items: center;
           justify-content: center;
-          align-items: center;
           width: 90%;
           position: relative;
+          gap: 5px;
 
           .swiper-slide {
             width: 25%;
             height: 360px;
             min-height: 360px;
             border-radius: 5px;
-            transition: all 0.5s ease;
-            position: relative;
             transition: all 0.5s ease;
             z-index: 1;
 
@@ -1624,7 +1636,9 @@ footer {
             }
 
             .card_textPart {
-              display: none;
+              h3 {
+                font-size: 14px;
+              }
             }
 
             .card_aboutTheCoach {
@@ -1635,38 +1649,31 @@ footer {
                 margin: 18px 10px;
 
                 p {
-                  font-size: calc(18px + 2 * (100vw / 1912));
+                  line-height: 21px;
+                  font-size: 14px;
                 }
 
                 ul {
                   padding-bottom: 15px;
 
                   h4 {
-                    font-size: calc(18px + 2 * (100vw / 1912));
+                    font-size: 14px;
+                    margin-bottom: 5px;
                   }
 
                   li {
-                    line-height: 27px;
-                    font-size: calc(17px + 1 * (100vw / 1912));
+                    line-height: 21px;
+                    font-size: 14px;
                   }
                 }
               }
             }
 
             &:hover {
-              position: fixed;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              width: 80%;
-              height: auto;
-              z-index: 10;
+              .card_textPart {
+                display: none;
+              }
             }
-          }
-          .swiper-wrapper .swiper-slide:not(:hover) {
-            opacity: 0.5;
-            transform: scale(0.9);
-            transition: all 0.3s ease;
           }
         }
       }
