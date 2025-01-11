@@ -51,7 +51,7 @@ header .header_contactsBlock .contactsBlock_content .contactsBlock_communication
           align-items: center;
   width: 32%;
   max-width: 470px;
-  min-width: 440px;
+  min-width: 430px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -105,13 +105,18 @@ header .header_contactsBlock .contactsBlock_content .communicationMethod_socialM
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 46%;
+  width: 50%;
 }
-header .header_contactsBlock .contactsBlock_content .communicationMethod_socialMedia .socialMedia_variants img {
-  width: 40px;
+header .header_contactsBlock .contactsBlock_content .communicationMethod_socialMedia .socialMedia_variants .icon {
+  width: 45px;
+  height: 45px;
   cursor: pointer;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  overflow: hidden;
+}
+header .header_contactsBlock .contactsBlock_content .communicationMethod_socialMedia .socialMedia_variants .icon:hover {
+  fill: #f9552d;
 }
 header .navigationBlock {
   width: 100%;
@@ -250,7 +255,7 @@ main .main_presentBlock {
   position: relative;
   width: 100%;
   height: 670px;
-  min-height: 200px;
+  min-height: 150px;
 }
 main .main_presentBlock img {
   width: 100%;
@@ -270,6 +275,16 @@ main .main_presentBlock .presentBlock_textPart .textPart_title h1 {
   font-weight: 600;
   color: white;
   margin-bottom: 15px;
+  position: relative;
+  z-index: 1000;
+}
+main .main_presentBlock .presentBlock_textPart .textPart_title .title-decoration {
+  position: absolute;
+  top: 0;
+  left: -15px;
+  width: 90px;
+  height: 75px;
+  z-index: 1;
 }
 main .main_presentBlock .presentBlock_textPart .textPart_title p {
   font-size: calc(26px + 0.5230125523vw);
@@ -282,7 +297,7 @@ main .main_presentBlock .presentBlock_textPart .textPart_title p span {
 }
 main .main_presentBlock .presentBlock_textPart p {
   margin-bottom: 40px;
-  font-size: calc(20px + 0.2092050209vw);
+  font-size: calc(21px + 0.2615062762vw);
   color: white;
   text-transform: uppercase;
   max-width: 600px;
@@ -327,12 +342,24 @@ main .main_aboutUs .aboutUs_textPart {
   display: block;
   width: 100%;
 }
-main .main_aboutUs .aboutUs_textPart h2 {
+main .main_aboutUs .aboutUs_textPart .textPart_title {
+  position: relative;
+}
+main .main_aboutUs .aboutUs_textPart .textPart_title h2 {
   font-size: calc(37px + 1.0460251046vw);
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 25px;
   position: relative;
+  z-index: 1000;
+}
+main .main_aboutUs .aboutUs_textPart .textPart_title .title-decoration {
+  position: absolute;
+  top: -7px;
+  left: 97px;
+  width: 95px;
+  height: 75px;
+  z-index: 1;
 }
 main .main_aboutUs .aboutUs_textPart p {
   font-size: calc(22px + 0.3138075314vw);
@@ -353,13 +380,27 @@ main .main_wrapperOurTrainers {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-main .main_wrapperOurTrainers h2 {
+main .main_wrapperOurTrainers .wrapperOurTrainers_titlePart {
+  position: relative;
+  width: 34%;
+  margin: 0 auto;
+}
+main .main_wrapperOurTrainers .wrapperOurTrainers_titlePart h2 {
   font-size: calc(34px + 0.9414225941vw);
   color: white;
   font-weight: 600;
   margin-bottom: 50px;
   position: relative;
   text-align: center;
+  z-index: 1000;
+}
+main .main_wrapperOurTrainers .wrapperOurTrainers_titlePart .title-decoration {
+  position: absolute;
+  top: -2px;
+  left: 15px;
+  width: 90px;
+  height: 75px;
+  z-index: 1;
 }
 main .main_wrapperOurTrainers .main_ourTrainers {
   display: -webkit-box;
@@ -625,12 +666,27 @@ main .main_wrapperOurCourses {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-main .main_wrapperOurCourses h2 {
+main .main_wrapperOurCourses .wrapperOurCourses_titlePart {
+  width: 33%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+main .main_wrapperOurCourses .wrapperOurCourses_titlePart h2 {
   font-size: calc(37px + 1.0460251046vw);
   font-weight: 600;
   color: white;
   margin-bottom: 13px;
-  text-align: center;
+  z-index: 1000;
+  position: relative;
+}
+main .main_wrapperOurCourses .wrapperOurCourses_titlePart .title-decoration {
+  position: absolute;
+  top: -3px;
+  left: 33px;
+  width: 100px;
+  height: 85px;
+  z-index: 1;
 }
 main .main_wrapperOurCourses .main_ourCourses {
   display: -webkit-box;
@@ -905,43 +961,60 @@ main .main_wrapperOurPasses {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 90px auto;
   height: auto;
   width: 100%;
 }
-main .main_wrapperOurPasses h2 {
+main .main_wrapperOurPasses .wrapperOurPasses_titlePart {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+main .main_wrapperOurPasses .wrapperOurPasses_titlePart h2 {
   font-size: calc(37px + 1.0460251046vw);
   color: #1a1a1a;
-  text-align: center;
   font-weight: 600;
+  position: relative;
+  z-index: 1000;
+}
+main .main_wrapperOurPasses .wrapperOurPasses_titlePart .title-decoration {
+  position: absolute;
+  top: -14px;
+  left: -44px;
+  width: 110px;
+  height: 80px;
+  z-index: 1;
 }
 main .main_wrapperOurPasses .main_passes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
 }
 main .main_wrapperOurPasses .main_passes a {
   cursor: pointer;
 }
 main .main_wrapperOurPasses .main_passes .swiper-wrapper {
-  width: 100%;
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
+  width: 90%;
   margin: 50px auto;
 }
 main .main_wrapperOurPasses .main_passes .swiper-wrapper .swiper-slide {
-  width: 90%;
+  width: 100%;
   background-color: white;
   border-radius: 3px;
   display: -webkit-box;
@@ -957,7 +1030,6 @@ main .main_wrapperOurPasses .main_passes .swiper-wrapper .swiper-slide {
   border: 5px solid #1a1a1a;
   min-height: 400px;
   position: relative;
-  margin-right: 13px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1302,6 +1374,14 @@ main .main_contactsAndschedule h2 {
   font-weight: 600;
   position: relative;
 }
+main .main_contactsAndschedule .title-decoration {
+  position: absolute;
+  top: 0;
+  left: -15px;
+  width: 90px;
+  height: 75px;
+  z-index: 1;
+}
 main .main_contactsAndschedule .contactsAndschedule_content {
   width: 100%;
   display: -webkit-box;
@@ -1509,13 +1589,16 @@ footer .footer_content .content_listPageNavigation li a:hover {
     width: 100%;
   }
   main .main_contactsAndschedule .contactsAndschedule_content .content_textPart ul .social {
-    width: 30%;
+    width: 12%;
   }
   main .main_contactsAndschedule .contactsAndschedule_content iframe {
     width: 100%;
   }
 }
 @media (max-width: 1220px) {
+  main .main_presentBlock .presentBlock_textPart .textPart_title .title-decoration {
+    height: 64px;
+  }
   main .main_wrapperOurTrainers .main_ourTrainers {
     width: 90%;
     display: -webkit-box;
@@ -1585,8 +1668,8 @@ footer .footer_content .content_listPageNavigation li a:hover {
   }
 }
 @media (max-width: 920px) {
-  header .header_contactsBlock .contactsBlock_content .contactsBlock_communicationMethod {
-    width: 25%;
+  header .header_contactsBlock .contactsBlock_content {
+    width: 97%;
   }
   header .navigationBlock .navigationBlock_content {
     width: 90%;
@@ -1615,6 +1698,8 @@ footer .footer_content .content_listPageNavigation li a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
+    margin: 0 auto;
   }
   main .main_wrapperOurTrainers .main_ourTrainers .swiper-wrapper {
     display: -webkit-box;
@@ -1625,6 +1710,10 @@ footer .footer_content .content_listPageNavigation li a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    align-items: center;
     width: 90%;
     position: relative;
   }
@@ -1635,6 +1724,9 @@ footer .footer_content .content_listPageNavigation li a:hover {
     border-radius: 5px;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    position: relative;
+    transition: all 0.5s ease;
+    z-index: 1;
   }
   main .main_wrapperOurTrainers .main_ourTrainers .swiper-wrapper .swiper-slide img {
     width: 100%;
@@ -1666,9 +1758,21 @@ footer .footer_content .content_listPageNavigation li a:hover {
     font-size: calc(17px + 0.0523012552vw);
   }
   main .main_wrapperOurTrainers .main_ourTrainers .swiper-wrapper .swiper-slide:hover {
-    width: 100%;
-    min-width: 100%;
-    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 80%;
+    height: auto;
+    z-index: 10;
+  }
+  main .main_wrapperOurTrainers .main_ourTrainers .swiper-wrapper .swiper-wrapper .swiper-slide:not(:hover) {
+    opacity: 0.5;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   main .main_passes .swiper-passes .swiper-wrapper .swiper-slide .card_modalWindWithFeatureList .closeModalWindow {
     top: 14px;
@@ -1715,6 +1819,9 @@ footer .footer_content .content_listPageNavigation li a:hover {
   }
 }
 @media (max-width: 645px) {
+  main .main_presentBlock {
+    height: 450px;
+  }
   main .main_wrapperOurTrainers .swiper .swiper-wrapper {
     margin: 0 auto;
   }
@@ -1808,15 +1915,41 @@ footer .footer_content .content_listPageNavigation li a:hover {
     width: 90%;
   }
 }
+@media (max-width: 385px) {
+  .main_wrapperOurPasses .wrapperOurPasses_titlePart .title-decoration {
+    position: absolute;
+    left: 70px !important;
+    top: 10px !important;
+  }
+}
+@media (max-width: 372px) {
+  main .main_presentBlock .presentBlock_textPart {
+    left: 20px !important;
+  }
+  main .main_wrapperOurTrainers .swiper-trainers {
+    width: 100%;
+  }
+  main .main_wrapperOurTrainers .swiper-trainers .swiper-wrapper .swiper-slide {
+    width: 100%;
+    min-height: 720px;
+  }
+}
 @media (max-width: 320px) {
   main .main_presentBlock .presentBlock_textPart {
-    top: 4%;
+    width: 290px !important;
+    top: 12%;
     left: 4%;
   }
   main .main_presentBlock .presentBlock_textPart .textPart_title h1 {
-    color: #f9552d;
+    color: white;
+    margin-bottom: 12px;
+  }
+  main .main_presentBlock .presentBlock_textPart .textPart_title p {
+    font-size: 23px !important;
   }
   main .main_presentBlock .presentBlock_textPart p {
+    font-size: 18px !important;
     line-height: 30px;
+    width: 80% !important;
   }
 }

@@ -38,7 +38,7 @@ header {
         align-items: center;
         width: 32%;
         max-width: 470px;
-        min-width: 440px;
+        min-width: 430px;
         justify-content: space-between;
 
         .communicationMethod_Elem {
@@ -76,12 +76,17 @@ header {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          width: 46%;
+          width: 50%;
 
-          img {
-            width: 40px;
+          .icon {
+            width: 45px;
+            height: 45px;
             cursor: pointer;
             transition: all 0.4s;
+            overflow: hidden;
+            &:hover {
+              fill: #f9552d;
+            }
           }
         }
       }
@@ -201,7 +206,7 @@ main {
     position: relative;
     width: 100%;
     height: 670px;
-    min-height: 200px;
+    min-height: 150px;
 
     img {
       width: 100%;
@@ -221,6 +226,16 @@ main {
           font-weight: 600;
           color: white;
           margin-bottom: 15px;
+          position: relative;
+          z-index: 1000;
+        }
+        .title-decoration {
+          position: absolute;
+          top: 0;
+          left: -15px;
+          width: 90px;
+          height: 75px;
+          z-index: 1;
         }
         p {
           font-size: calc(26px + 10 * (100vw / 1912));
@@ -234,7 +249,7 @@ main {
       }
       p {
         margin-bottom: 40px;
-        font-size: calc(20px + 4 * (100vw / 1912));
+        font-size: calc(21px + 5 * (100vw / 1912));
         color: white;
         text-transform: uppercase;
         max-width: 600px;
@@ -273,13 +288,26 @@ main {
     .aboutUs_textPart {
       display: block;
       width: 100%;
-      h2 {
-        font-size: $fontSzForH2;
-        font-weight: 600;
-        color: #1a1a1a;
-        margin-bottom: 25px;
+      .textPart_title {
         position: relative;
+        h2 {
+          font-size: $fontSzForH2;
+          font-weight: 600;
+          color: #1a1a1a;
+          margin-bottom: 25px;
+          position: relative;
+          z-index: 1000;
+        }
+        .title-decoration {
+          position: absolute;
+          top: -7px;
+          left: 97px;
+          width: 95px;
+          height: 75px;
+          z-index: 1;
+        }
       }
+
       p {
         font-size: calc(22px + 6 * (100vw / 1912));
         color: #1a1a1a;
@@ -301,13 +329,27 @@ main {
     height: auto;
     box-sizing: border-box;
 
-    h2 {
-      font-size: calc(34px + 18 * (100vw / 1912));
-      color: white;
-      font-weight: 600;
-      margin-bottom: 50px;
+    .wrapperOurTrainers_titlePart {
       position: relative;
-      text-align: center;
+      width: 34%;
+      margin: 0 auto;
+      h2 {
+        font-size: calc(34px + 18 * (100vw / 1912));
+        color: white;
+        font-weight: 600;
+        margin-bottom: 50px;
+        position: relative;
+        text-align: center;
+        z-index: 1000;
+      }
+      .title-decoration {
+        position: absolute;
+        top: -2px;
+        left: 15px;
+        width: 90px;
+        height: 75px;
+        z-index: 1;
+      }
     }
 
     .main_ourTrainers {
@@ -556,12 +598,28 @@ main {
     padding: 60px 0;
     box-sizing: border-box;
 
-    h2 {
-      font-size: $fontSzForH2;
-      font-weight: 600;
-      color: white;
-      margin-bottom: 13px;
+    .wrapperOurCourses_titlePart {
+      width: 33%;
+      margin: 0 auto;
+      position: relative;
       text-align: center;
+
+      h2 {
+        font-size: $fontSzForH2;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 13px;
+        z-index: 1000;
+        position: relative;
+      }
+      .title-decoration {
+        position: absolute;
+        top: -3px;
+        left: 33px;
+        width: 100px;
+        height: 85px;
+        z-index: 1;
+      }
     }
 
     .main_ourCourses {
@@ -794,34 +852,51 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: 90px auto;
     height: auto;
     width: 100%;
-    h2 {
-      font-size: $fontSzForH2;
-      color: #1a1a1a;
+    .wrapperOurPasses_titlePart {
+      position: relative;
+      margin: 0 auto;
       text-align: center;
-      font-weight: 600;
+
+      h2 {
+        font-size: $fontSzForH2;
+        color: #1a1a1a;
+        font-weight: 600;
+        position: relative;
+        z-index: 1000;
+      }
+
+      .title-decoration {
+        position: absolute;
+        top: -14px;
+        left: -44px;
+        width: 110px;
+        height: 80px;
+        z-index: 1;
+      }
     }
 
     .main_passes {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       position: relative;
       margin: 0 auto;
-      width: 90%;
+      width: 100%;
       a {
         cursor: pointer;
       }
       .swiper-wrapper {
-        width: 100%;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
+        width: 90%;
         margin: 50px auto;
         .swiper-slide {
-          width: 90%;
+          width: 100%;
           background-color: white;
           border-radius: 3px;
           display: flex;
@@ -830,7 +905,6 @@ main {
           border: 5px solid #1a1a1a;
           min-height: 400px;
           position: relative;
-          margin-right: 13px;
           user-select: none;
 
           .card_name {
@@ -1164,6 +1238,14 @@ main {
       font-weight: 600;
       position: relative;
     }
+    .title-decoration {
+      position: absolute;
+      top: 0;
+      left: -15px;
+      width: 90px;
+      height: 75px;
+      z-index: 1;
+    }
 
     .contactsAndschedule_content {
       width: 100%;
@@ -1386,7 +1468,7 @@ footer {
           width: 100%;
           ul {
             .social {
-              width: 30%;
+              width: 12%;
             }
           }
         }
@@ -1400,6 +1482,15 @@ footer {
 
 @media (max-width: 1220px) {
   main {
+    .main_presentBlock {
+      .presentBlock_textPart {
+        .textPart_title {
+          .title-decoration {
+            height: 64px;
+          }
+        }
+      }
+    }
     .main_wrapperOurTrainers {
       .main_ourTrainers {
         width: 90%;
@@ -1467,9 +1558,7 @@ footer {
   header {
     .header_contactsBlock {
       .contactsBlock_content {
-        .contactsBlock_communicationMethod {
-          width: 25%;
-        }
+        width: 97%;
       }
     }
 
@@ -1506,10 +1595,14 @@ footer {
 
       .main_ourTrainers {
         display: flex;
+        width: 100%;
+        margin: 0 auto;
 
         .swiper-wrapper {
           display: flex;
           flex-wrap: nowrap;
+          align-items: center;
+          justify-content: center;
           align-items: center;
           width: 90%;
           position: relative;
@@ -1520,6 +1613,9 @@ footer {
             min-height: 360px;
             border-radius: 5px;
             transition: all 0.5s ease;
+            position: relative;
+            transition: all 0.5s ease;
+            z-index: 1;
 
             img {
               width: 100%;
@@ -1558,10 +1654,19 @@ footer {
             }
 
             &:hover {
-              width: 100%;
-              min-width: 100%;
-              margin: 0 auto;
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 80%;
+              height: auto;
+              z-index: 10;
             }
+          }
+          .swiper-wrapper .swiper-slide:not(:hover) {
+            opacity: 0.5;
+            transform: scale(0.9);
+            transition: all 0.3s ease;
           }
         }
       }
@@ -1640,6 +1745,9 @@ footer {
 
 @media (max-width: 645px) {
   main {
+    .main_presentBlock {
+      height: 450px;
+    }
     .main_wrapperOurTrainers {
       .swiper {
         .swiper-wrapper {
@@ -1784,20 +1892,60 @@ footer {
   }
 }
 
+@media (max-width: 385px) {
+  .main_wrapperOurPasses {
+    .wrapperOurPasses_titlePart {
+      .title-decoration {
+        position: absolute;
+        left: 70px !important;
+        top: 10px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 372px) {
+  main {
+    .main_presentBlock {
+      .presentBlock_textPart {
+        left: 20px !important;
+      }
+    }
+    .main_wrapperOurTrainers {
+      .swiper-trainers {
+        width: 100%;
+        .swiper-wrapper {
+          .swiper-slide {
+            width: 100%;
+            min-height: 720px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 320px) {
   main {
     .main_presentBlock {
       .presentBlock_textPart {
-        top: 4%;
+        width: 290px !important;
+        top: 12%;
         left: 4%;
 
         .textPart_title {
           h1 {
-            color: #f9552d;
+            color: white;
+            margin-bottom: 12px;
+          }
+          p {
+            font-size: 23px !important;
           }
         }
         p {
+          font-size: 18px !important;
           line-height: 30px;
+          width: 80% !important;
         }
       }
     }
