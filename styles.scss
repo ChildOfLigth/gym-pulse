@@ -1,4 +1,4 @@
-$fontSzForH2: calc(37px + 20 * (100vw / 1912));
+$fontSzForH2: calc(34px + 18 * (100vw / 1912));
 
 header {
   display: flex;
@@ -290,6 +290,8 @@ main {
       width: 100%;
       .textPart_title {
         position: relative;
+        min-width: 80px;
+        max-width: 170px;
         h2 {
           font-size: $fontSzForH2;
           font-weight: 600;
@@ -331,20 +333,22 @@ main {
 
     .wrapperOurTrainers_titlePart {
       position: relative;
-      width: 34%;
+      width: 35%;
+      max-width: 700px;
+      min-width: 300px;
       margin: 0 auto;
+      text-align: center;
       h2 {
-        font-size: calc(34px + 18 * (100vw / 1912));
+        font-size: $fontSzForH2;
         color: white;
         font-weight: 600;
         margin-bottom: 50px;
         position: relative;
-        text-align: center;
         z-index: 1000;
       }
       .title-decoration {
         position: absolute;
-        top: -2px;
+        top: -8px;
         left: 15px;
         width: 90px;
         height: 75px;
@@ -599,9 +603,11 @@ main {
     box-sizing: border-box;
 
     .wrapperOurCourses_titlePart {
-      width: 33%;
-      margin: 0 auto;
       position: relative;
+      width: 35%;
+      max-width: 600px;
+      min-width: 300px;
+      margin: 0 auto;
       text-align: center;
 
       h2 {
@@ -614,7 +620,7 @@ main {
       }
       .title-decoration {
         position: absolute;
-        top: -3px;
+        top: -10px;
         left: 33px;
         width: 100px;
         height: 85px;
@@ -858,6 +864,9 @@ main {
     width: 100%;
     .wrapperOurPasses_titlePart {
       position: relative;
+      width: 35%;
+      max-width: 600px;
+      min-width: 300px;
       margin: 0 auto;
       text-align: center;
 
@@ -1392,6 +1401,29 @@ footer {
       }
     }
   }
+
+  main {
+    .main_aboutUs {
+      .aboutCourse_textPart {
+        .textPart_title {
+          .title-decoration {
+            position: absolute;
+            top: -17px;
+            left: 94px;
+          }
+        }
+      }
+    }
+    .main_wrapperOurTrainers {
+      .wrapperOurTrainers_titlePart {
+        .title-decoration {
+          position: absolute;
+          top: -8px;
+          left: -8px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 1570px) {
@@ -1435,6 +1467,19 @@ footer {
   }
 }
 
+@media (max-width: 1430px) {
+  main {
+    .main_wrapperOurTrainers {
+      .wrapperOurTrainers_titlePart {
+        .title-decoration {
+          top: 27px;
+          left: 22px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1415px) {
   main {
     .main_wrapperOurCourses {
@@ -1458,6 +1503,15 @@ footer {
     }
   }
   main {
+    .main_wrapperOurCourses {
+      .wrapperOurCourses_titlePart {
+        .title-decoration {
+          position: absolute;
+          top: -23px;
+          left: 6px;
+        }
+      }
+    }
     .main_contactsAndschedule {
       width: 80%;
 
@@ -1474,6 +1528,36 @@ footer {
         }
         iframe {
           width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1312px) {
+  main {
+    .main_aboutUs {
+      .aboutUs_textPart {
+        .textPart_title {
+          .title-decoration {
+            position: absolute;
+            top: -20px;
+            left: 78px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1273px) {
+  main {
+    .main_wrapperOurPasses {
+      .wrapperOurPasses_titlePart {
+        .title-decoration {
+          position: absolute;
+          top: 35px;
+          left: 30px;
         }
       }
     }
@@ -1535,13 +1619,22 @@ footer {
   }
 }
 
-@media (max-width: 1061px) {
+@media (max-width: 1062px) {
   main {
     .main_wrapperOurTrainers {
       .main_ourTrainers {
         width: 100%;
         .ourCourses_listCourse {
           width: 100%;
+        }
+      }
+    }
+    .main_wrapperOurCourses {
+      .wrapperOurCourses_titlePart {
+        .title-decoration {
+          position: absolute;
+          top: 10px;
+          left: 20px;
         }
       }
     }
@@ -1561,6 +1654,15 @@ footer {
           .swiper-slide {
             width: 47%;
           }
+        }
+      }
+    }
+    .main_wrapperOurPasses {
+      .wrapperOurPasses_titlePart {
+        .title-decoration {
+          position: absolute;
+          top: 25px;
+          left: 22px;
         }
       }
     }
@@ -1890,6 +1992,15 @@ footer {
         }
       }
     }
+    .main_wrapperOurPasses {
+      .swiper-passes {
+        .swiper-wrapper {
+          .swiper-slide {
+            min-height: 560px !important;
+          }
+        }
+      }
+    }
   }
 
   footer {
@@ -1902,9 +2013,10 @@ footer {
 @media (max-width: 385px) {
   .main_wrapperOurPasses {
     .wrapperOurPasses_titlePart {
+      width: 50%;
       .title-decoration {
         position: absolute;
-        left: 70px !important;
+        left: 30px !important;
         top: 10px !important;
       }
     }

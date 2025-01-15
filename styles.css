@@ -344,9 +344,11 @@ main .main_aboutUs .aboutUs_textPart {
 }
 main .main_aboutUs .aboutUs_textPart .textPart_title {
   position: relative;
+  min-width: 80px;
+  max-width: 170px;
 }
 main .main_aboutUs .aboutUs_textPart .textPart_title h2 {
-  font-size: calc(37px + 1.0460251046vw);
+  font-size: calc(34px + 0.9414225941vw);
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 25px;
@@ -382,8 +384,11 @@ main .main_wrapperOurTrainers {
 }
 main .main_wrapperOurTrainers .wrapperOurTrainers_titlePart {
   position: relative;
-  width: 34%;
+  width: 35%;
+  max-width: 700px;
+  min-width: 300px;
   margin: 0 auto;
+  text-align: center;
 }
 main .main_wrapperOurTrainers .wrapperOurTrainers_titlePart h2 {
   font-size: calc(34px + 0.9414225941vw);
@@ -391,12 +396,11 @@ main .main_wrapperOurTrainers .wrapperOurTrainers_titlePart h2 {
   font-weight: 600;
   margin-bottom: 50px;
   position: relative;
-  text-align: center;
   z-index: 1000;
 }
 main .main_wrapperOurTrainers .wrapperOurTrainers_titlePart .title-decoration {
   position: absolute;
-  top: -2px;
+  top: -8px;
   left: 15px;
   width: 90px;
   height: 75px;
@@ -667,13 +671,15 @@ main .main_wrapperOurCourses {
           box-sizing: border-box;
 }
 main .main_wrapperOurCourses .wrapperOurCourses_titlePart {
-  width: 33%;
-  margin: 0 auto;
   position: relative;
+  width: 35%;
+  max-width: 600px;
+  min-width: 300px;
+  margin: 0 auto;
   text-align: center;
 }
 main .main_wrapperOurCourses .wrapperOurCourses_titlePart h2 {
-  font-size: calc(37px + 1.0460251046vw);
+  font-size: calc(34px + 0.9414225941vw);
   font-weight: 600;
   color: white;
   margin-bottom: 13px;
@@ -682,7 +688,7 @@ main .main_wrapperOurCourses .wrapperOurCourses_titlePart h2 {
 }
 main .main_wrapperOurCourses .wrapperOurCourses_titlePart .title-decoration {
   position: absolute;
-  top: -3px;
+  top: -10px;
   left: 33px;
   width: 100px;
   height: 85px;
@@ -970,11 +976,14 @@ main .main_wrapperOurPasses {
 }
 main .main_wrapperOurPasses .wrapperOurPasses_titlePart {
   position: relative;
+  width: 35%;
+  max-width: 600px;
+  min-width: 300px;
   margin: 0 auto;
   text-align: center;
 }
 main .main_wrapperOurPasses .wrapperOurPasses_titlePart h2 {
-  font-size: calc(37px + 1.0460251046vw);
+  font-size: calc(34px + 0.9414225941vw);
   color: #1a1a1a;
   font-weight: 600;
   position: relative;
@@ -1520,6 +1529,16 @@ footer .footer_content .content_listPageNavigation li a:hover {
   .navigationBlock .navigationBlock_content .navigateBlock_pageNavigation {
     width: 90%;
   }
+  main .main_aboutUs .aboutCourse_textPart .textPart_title .title-decoration {
+    position: absolute;
+    top: -17px;
+    left: 94px;
+  }
+  main .main_wrapperOurTrainers .wrapperOurTrainers_titlePart .title-decoration {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+  }
 }
 @media (max-width: 1570px) {
   header .navigationBlock .navigationBlock_content .navigateBlock_pageNavigation {
@@ -1566,6 +1585,12 @@ footer .footer_content .content_listPageNavigation li a:hover {
     width: 80%;
   }
 }
+@media (max-width: 1430px) {
+  main .main_wrapperOurTrainers .wrapperOurTrainers_titlePart .title-decoration {
+    top: 27px;
+    left: 22px;
+  }
+}
 @media (max-width: 1415px) {
   main .main_wrapperOurCourses .main_ourCourses .ourCourses_listCourse {
     width: 94%;
@@ -1574,6 +1599,11 @@ footer .footer_content .content_listPageNavigation li a:hover {
 @media (max-width: 1366px) {
   header .navigationBlock .navigationBlock_content .navigateBlock_pageNavigation {
     width: 60%;
+  }
+  main .main_wrapperOurCourses .wrapperOurCourses_titlePart .title-decoration {
+    position: absolute;
+    top: -23px;
+    left: 6px;
   }
   main .main_contactsAndschedule {
     width: 80%;
@@ -1593,6 +1623,20 @@ footer .footer_content .content_listPageNavigation li a:hover {
   }
   main .main_contactsAndschedule .contactsAndschedule_content iframe {
     width: 100%;
+  }
+}
+@media (max-width: 1312px) {
+  main .main_aboutUs .aboutUs_textPart .textPart_title .title-decoration {
+    position: absolute;
+    top: -20px;
+    left: 78px;
+  }
+}
+@media (max-width: 1273px) {
+  main .main_wrapperOurPasses .wrapperOurPasses_titlePart .title-decoration {
+    position: absolute;
+    top: 35px;
+    left: 30px;
   }
 }
 @media (max-width: 1220px) {
@@ -1650,12 +1694,17 @@ footer .footer_content .content_listPageNavigation li a:hover {
     width: 75%;
   }
 }
-@media (max-width: 1061px) {
+@media (max-width: 1062px) {
   main .main_wrapperOurTrainers .main_ourTrainers {
     width: 100%;
   }
   main .main_wrapperOurTrainers .main_ourTrainers .ourCourses_listCourse {
     width: 100%;
+  }
+  main .main_wrapperOurCourses .wrapperOurCourses_titlePart .title-decoration {
+    position: absolute;
+    top: 10px;
+    left: 20px;
   }
 }
 @media (max-width: 1030px) {
@@ -1673,6 +1722,11 @@ footer .footer_content .content_listPageNavigation li a:hover {
   }
   main .main_wrapperOurCourses .main_ourCourses .swiper-wrapper .swiper-slide {
     width: 47%;
+  }
+  main .main_wrapperOurPasses .wrapperOurPasses_titlePart .title-decoration {
+    position: absolute;
+    top: 25px;
+    left: 22px;
   }
 }
 @media (max-width: 920px) {
@@ -1906,14 +1960,20 @@ footer .footer_content .content_listPageNavigation li a:hover {
   main .main_contactsAndschedule .contactsAndschedule_content iframe {
     width: 100%;
   }
+  main .main_wrapperOurPasses .swiper-passes .swiper-wrapper .swiper-slide {
+    min-height: 560px !important;
+  }
   footer .footer_content {
     width: 90%;
   }
 }
 @media (max-width: 385px) {
+  .main_wrapperOurPasses .wrapperOurPasses_titlePart {
+    width: 50%;
+  }
   .main_wrapperOurPasses .wrapperOurPasses_titlePart .title-decoration {
     position: absolute;
-    left: 70px !important;
+    left: 30px !important;
     top: 10px !important;
   }
 }
