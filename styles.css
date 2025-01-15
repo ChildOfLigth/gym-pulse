@@ -992,7 +992,7 @@ main .main_wrapperOurPasses .wrapperOurPasses_titlePart h2 {
 main .main_wrapperOurPasses .wrapperOurPasses_titlePart .title-decoration {
   position: absolute;
   top: -14px;
-  left: -44px;
+  left: 10px;
   width: 110px;
   height: 80px;
   z-index: 1;
@@ -1959,9 +1959,6 @@ footer .footer_content .content_listPageNavigation li a:hover {
   }
   main .main_contactsAndschedule .contactsAndschedule_content iframe {
     width: 100%;
-  }
-  main .main_wrapperOurPasses .swiper-passes .swiper-wrapper .swiper-slide {
-    min-height: 560px !important;
   }
   footer .footer_content {
     width: 90%;

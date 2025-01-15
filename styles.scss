@@ -881,7 +881,7 @@ main {
       .title-decoration {
         position: absolute;
         top: -14px;
-        left: -44px;
+        left: 10px;
         width: 110px;
         height: 80px;
         z-index: 1;
@@ -1989,15 +1989,6 @@ footer {
         }
         iframe {
           width: 100%;
-        }
-      }
-    }
-    .main_wrapperOurPasses {
-      .swiper-passes {
-        .swiper-wrapper {
-          .swiper-slide {
-            min-height: 560px !important;
-          }
         }
       }
     }
