@@ -241,6 +241,16 @@ header .navigationBlock .navigationBlock_content .navigateBlock_hiddenBlockWithL
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   margin-bottom: 15px;
+  position: relative;
+}
+header .navigationBlock .navigationBlock_content .navigateBlock_hiddenBlockWithLinks .content a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f9552d;
 }
 header .navigationBlock .navigationBlock_content .navigateBlock_hiddenBlockWithLinks .content a:hover {
   color: #f9552d;
@@ -350,26 +360,13 @@ main .main_aboutUs .aboutUs_textPart {
   display: block;
   width: 100%;
 }
-main .main_aboutUs .aboutUs_textPart .textPart_title {
-  position: relative;
-  min-width: 80px;
-  max-width: 170px;
-}
-main .main_aboutUs .aboutUs_textPart .textPart_title h2 {
+main .main_aboutUs .aboutUs_textPart h2 {
   font-size: calc(34px + 0.9414225941vw);
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 25px;
   position: relative;
   z-index: 1000;
-}
-main .main_aboutUs .aboutUs_textPart .textPart_title .title-decoration {
-  position: absolute;
-  top: -7px;
-  left: 97px;
-  width: 95px;
-  height: 75px;
-  z-index: 1;
 }
 main .main_aboutUs .aboutUs_textPart p {
   font-size: calc(22px + 0.3138075314vw);
@@ -588,6 +585,10 @@ main .main_wrapperOurTrainers .swiper-trainers .swiper-slide {
   overflow: hidden;
   cursor: pointer;
 }
+main .main_wrapperOurTrainers .swiper-trainers .swiper-slide:has(.card_aboutTheCoach.active) .toOpenAdditionalInfo {
+  background-color: #f9552d;
+  scale: 1;
+}
 main .main_wrapperOurTrainers .swiper-trainers .swiper-slide .toOpenAdditionalInfo {
   width: 58px;
   height: 58px;
@@ -595,13 +596,10 @@ main .main_wrapperOurTrainers .swiper-trainers .swiper-slide .toOpenAdditionalIn
   border: none;
   background-color: white;
   position: absolute;
-  top: 20px;
-  right: 20px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-main .main_wrapperOurTrainers .swiper-trainers .swiper-slide .toOpenAdditionalInfo:hover {
-  background-color: #f9552d;
+  top: 10px;
+  right: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 main .main_wrapperOurTrainers .swiper-trainers .swiper-slide img {
   width: 100%;
@@ -656,6 +654,7 @@ main .main_wrapperOurTrainers .swiper-trainers .swiper-slide .card_aboutTheCoach
   font-size: calc(22px + 0.3138075314vw);
   line-height: 30px;
   margin-bottom: 13px;
+  width: 88%;
 }
 main .main_wrapperOurTrainers .swiper-trainers .swiper-slide .card_aboutTheCoach .aboutTheCoach_textPart p span {
   color: #f9552d;
@@ -1926,6 +1925,12 @@ footer .footer_content .content_listPageNavigation li a:hover {
     display: flex;
   }
 }
+@media (max-width: 405px) {
+  .main_wrapperOurTrainers .swiper-trainers .swiper-wrapper .swiper-slide .toOpenAdditionalInfo {
+    width: 40px;
+    height: 40px;
+  }
+}
 @media (max-width: 396px) {
   .header .navigationBlock .navigationBlock_content .navigateBlock_hiddenBlockWithLinks .content {
     width: 100%;
@@ -1993,6 +1998,13 @@ footer .footer_content .content_listPageNavigation li a:hover {
   main .main_wrapperOurTrainers .swiper-trainers .swiper-wrapper .swiper-slide {
     width: 100%;
     min-height: 720px;
+  }
+}
+@media (max-width: 360px) {
+  .main_wrapperOurTrainers .swiper-trainers .swiper-wrapper .swiper-slide .toOpenAdditionalInfo {
+    top: 13px;
+    width: 40px;
+    height: 40px;
   }
 }
 @media (max-width: 320px) {

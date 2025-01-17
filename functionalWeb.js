@@ -138,11 +138,19 @@ window.addEventListener("DOMContentLoaded", function () {
       btnToOpenAdditionalInfo.innerHTML = '<img src="/imgs/visible 1.svg"/>';
 
       card.appendChild(btnToOpenAdditionalInfo);
+
+      const aboutTheCoach = card.querySelector(".card_aboutTheCoach");
       if (card.contains(btnToOpenAdditionalInfo)) {
-        const aboutTheCoach = card.querySelector(".card_aboutTheCoach");
         btnToOpenAdditionalInfo.onclick = () => {
           aboutTheCoach.classList.toggle("active");
         };
+      }
+
+      if (aboutTheCoach) {
+        if (card.classList.contains("swiper-slide-active")) {
+          aboutTheCoach.classList.remove("active");
+          console.log("Removed 'active' from aboutTheCoach for active slide");
+        }
       }
     });
   }

@@ -194,6 +194,16 @@ header {
             color: white;
             transition: all 0.3s;
             margin-bottom: 15px;
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: -3px;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background-color: #f9552d;
+            }
 
             &:hover {
               color: #f9552d;
@@ -296,26 +306,13 @@ main {
     .aboutUs_textPart {
       display: block;
       width: 100%;
-      .textPart_title {
+      h2 {
+        font-size: $fontSzForH2;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 25px;
         position: relative;
-        min-width: 80px;
-        max-width: 170px;
-        h2 {
-          font-size: $fontSzForH2;
-          font-weight: 600;
-          color: #1a1a1a;
-          margin-bottom: 25px;
-          position: relative;
-          z-index: 1000;
-        }
-        .title-decoration {
-          position: absolute;
-          top: -7px;
-          left: 97px;
-          width: 95px;
-          height: 75px;
-          z-index: 1;
-        }
+        z-index: 1000;
       }
 
       p {
@@ -514,6 +511,13 @@ main {
         overflow: hidden;
         cursor: pointer;
 
+        &:has(.card_aboutTheCoach.active) {
+          .toOpenAdditionalInfo {
+            background-color: #f9552d;
+            scale: 1;
+          }
+        }
+
         .toOpenAdditionalInfo {
           width: 58px;
           height: 58px;
@@ -521,12 +525,9 @@ main {
           border: none;
           background-color: white;
           position: absolute;
-          top: 20px;
-          right: 20px;
-          transition: all 0.5s;
-          &:hover {
-            background-color: #f9552d;
-          }
+          top: 10px;
+          right: 10px;
+          transition: all 0.3s;
         }
 
         img {
@@ -575,6 +576,7 @@ main {
               font-size: calc(22px + 6 * (100vw / 1912));
               line-height: 30px;
               margin-bottom: 13px;
+              width: 88%;
 
               span {
                 color: #f9552d;
@@ -1933,6 +1935,21 @@ footer {
   }
 }
 
+@media (max-width: 405px) {
+  .main_wrapperOurTrainers {
+    .swiper-trainers {
+      .swiper-wrapper {
+        .swiper-slide {
+          .toOpenAdditionalInfo {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 396px) {
   .header {
     .navigationBlock {
@@ -2032,6 +2049,22 @@ footer {
           .swiper-slide {
             width: 100%;
             min-height: 720px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .main_wrapperOurTrainers {
+    .swiper-trainers {
+      .swiper-wrapper {
+        .swiper-slide {
+          .toOpenAdditionalInfo {
+            top: 13px;
+            width: 40px;
+            height: 40px;
           }
         }
       }
