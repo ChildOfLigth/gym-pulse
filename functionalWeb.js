@@ -126,4 +126,24 @@ window.addEventListener("DOMContentLoaded", function () {
       };
     }
   });
+
+  const swiperWithTrainersCard = document.querySelector(".swiper-trainers");
+  const swiperSlidesWithTrainers =
+    swiperWithTrainersCard.querySelectorAll(".swiper-slide");
+
+  if (window.matchMedia("(max-width: 500px)").matches) {
+    swiperSlidesWithTrainers.forEach((card) => {
+      const btnToOpenAdditionalInfo = document.createElement("button");
+      btnToOpenAdditionalInfo.classList.add("toOpenAdditionalInfo");
+      btnToOpenAdditionalInfo.innerHTML = '<img src="/imgs/visible 1.svg"/>';
+
+      card.appendChild(btnToOpenAdditionalInfo);
+      if (card.contains(btnToOpenAdditionalInfo)) {
+        const aboutTheCoach = card.querySelector(".card_aboutTheCoach");
+        btnToOpenAdditionalInfo.onclick = () => {
+          aboutTheCoach.classList.toggle("active");
+        };
+      }
+    });
+  }
 });

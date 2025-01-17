@@ -105,6 +105,14 @@ header {
       align-items: center;
       justify-content: space-between;
       margin: 0 auto;
+      p {
+        font-size: calc(22px + 6 * (100vw / 1912));
+        font-weight: 600;
+        color: white;
+        span {
+          color: #f9552d;
+        }
+      }
 
       .navigateBlock_pageNavigation {
         width: 44%;
@@ -315,9 +323,12 @@ main {
         color: #1a1a1a;
         margin-bottom: 35px;
         line-height: 35px;
+
         span {
-          color: #f9552d;
           font-weight: 600;
+        }
+        span:nth-child(2) {
+          color: #f9552d;
         }
       }
     }
@@ -503,6 +514,21 @@ main {
         overflow: hidden;
         cursor: pointer;
 
+        .toOpenAdditionalInfo {
+          width: 58px;
+          height: 58px;
+          border-radius: 50%;
+          border: none;
+          background-color: white;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          transition: all 0.5s;
+          &:hover {
+            background-color: #f9552d;
+          }
+        }
+
         img {
           width: 100%;
           height: 85%;
@@ -577,10 +603,8 @@ main {
               }
             }
           }
-        }
 
-        &:hover {
-          .card_aboutTheCoach {
+          &.active {
             opacity: 1;
           }
         }
@@ -725,15 +749,6 @@ main {
               opacity: 0;
             }
           }
-          &:active {
-            .elem_aboutCourse {
-              opacity: 1;
-            }
-            .elem_nameCourse {
-              max-height: 0;
-              opacity: 0;
-            }
-          }
         }
       }
     }
@@ -777,7 +792,6 @@ main {
             overflow: hidden;
             background-color: #f9552d;
             transition: all 0.5s;
-            opacity: 1;
 
             h2 {
               font-size: calc(23px + 7 * (100vw / 1912));
@@ -837,16 +851,6 @@ main {
             }
             .elem_nameCourse {
               max-height: 0;
-              opacity: 0;
-            }
-          }
-          &:active {
-            .elem_aboutCourse {
-              opacity: 1;
-            }
-            .elem_nameCourse {
-              max-height: 0;
-              opacity: 0;
             }
           }
         }
