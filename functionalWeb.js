@@ -135,7 +135,7 @@ window.addEventListener("DOMContentLoaded", function () {
     swiperSlidesWithTrainers.forEach((card) => {
       const btnToOpenAdditionalInfo = document.createElement("button");
       btnToOpenAdditionalInfo.classList.add("toOpenAdditionalInfo");
-      btnToOpenAdditionalInfo.innerHTML = '<img src="/imgs/visible 1.svg"/>';
+      btnToOpenAdditionalInfo.innerHTML = `<img src="imgs/visible 1.svg"/>`;
 
       card.appendChild(btnToOpenAdditionalInfo);
 
