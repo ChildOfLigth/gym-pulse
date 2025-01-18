@@ -12,6 +12,16 @@ window.addEventListener("DOMContentLoaded", function () {
     blockWithLinks.classList.remove("active");
   };
 
+  const burgerMenuNavigationUnit = document.querySelector(
+    ".navigateBlock_hiddenBlockWithLinks"
+  );
+  const navigationLink = burgerMenuNavigationUnit.querySelectorAll("a");
+  navigationLink.forEach((link) => {
+    link.onclick = () => {
+      blockWithLinks.classList.remove("active");
+    };
+  });
+
   const buttonScrollTop = document.querySelector(".main_scrollTop");
   window.addEventListener("scroll", () => {
     if (window.scrollY >= 1600) {
@@ -135,7 +145,7 @@ window.addEventListener("DOMContentLoaded", function () {
     swiperSlidesWithTrainers.forEach((card) => {
       const btnToOpenAdditionalInfo = document.createElement("button");
       btnToOpenAdditionalInfo.classList.add("toOpenAdditionalInfo");
-      btnToOpenAdditionalInfo.innerHTML = `<img src="imgs/visible 1.svg"/>`;
+      btnToOpenAdditionalInfo.innerHTML = `<img src="imgs/question-mark.png"/>`;
 
       card.appendChild(btnToOpenAdditionalInfo);
 
