@@ -1003,7 +1003,7 @@ main .main_wrapperOurPasses .wrapperOurPasses_titlePart h2 {
   color: #1a1a1a;
   font-weight: 600;
   position: relative;
-  z-index: 100;
+  z-index: 1;
 }
 main .main_wrapperOurPasses .wrapperOurPasses_titlePart .title-decoration {
   position: absolute;
@@ -1011,7 +1011,7 @@ main .main_wrapperOurPasses .wrapperOurPasses_titlePart .title-decoration {
   left: 10px;
   width: 110px;
   height: 80px;
-  z-index: 1;
+  z-index: -1;
 }
 main .main_wrapperOurPasses .main_passes {
   display: -webkit-box;
@@ -1348,7 +1348,7 @@ main .main_wrapperOurPasses .swiper-passes .swiper-wrapper .swiper-slide .card_m
   height: auto;
   padding: 30px;
   background-color: white;
-  z-index: 10000 !important;
+  z-index: 1000 !important;
   border-radius: 5px;
   -webkit-box-shadow: -5px 5px 10px #1a1a1a;
           box-shadow: -5px 5px 10px #1a1a1a;
