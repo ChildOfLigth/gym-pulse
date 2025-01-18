@@ -73,7 +73,6 @@ window.addEventListener("DOMContentLoaded", function () {
     ".swiper-trainers",
     ".main_ourTrainers",
     {
-      loop: true,
       slidesPerView: 1,
       centeredSlides: true,
       spaceBetween: 30,
@@ -83,7 +82,6 @@ window.addEventListener("DOMContentLoaded", function () {
   );
 
   creatingSwiper("(max-width: 790px)", ".swiper-passes", ".main_passes", {
-    loop: true,
     slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 30,
@@ -92,7 +90,6 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 
   creatingSwiper("(max-width: 840px)", ".swiper-courses", ".main_ourCourses", {
-    loop: true,
     slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 30,
@@ -145,7 +142,7 @@ window.addEventListener("DOMContentLoaded", function () {
     swiperSlidesWithTrainers.forEach((card) => {
       const btnToOpenAdditionalInfo = document.createElement("button");
       btnToOpenAdditionalInfo.classList.add("toOpenAdditionalInfo");
-      btnToOpenAdditionalInfo.innerHTML = `<img src="imgs/question-mark.png"/>`;
+      btnToOpenAdditionalInfo.innerHTML = `<img src="imgs/exclamation-mark.png"/>`;
 
       card.appendChild(btnToOpenAdditionalInfo);
 
@@ -159,7 +156,6 @@ window.addEventListener("DOMContentLoaded", function () {
       if (aboutTheCoach) {
         if (card.classList.contains("swiper-slide-active")) {
           aboutTheCoach.classList.remove("active");
-          console.log("Removed 'active' from aboutTheCoach for active slide");
         }
       }
     });
