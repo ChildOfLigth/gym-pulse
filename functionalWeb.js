@@ -144,18 +144,10 @@ window.addEventListener("DOMContentLoaded", function () {
 
   if (window.matchMedia("(max-width: 500px)").matches) {
     swiperSlidesWithTrainers.forEach((card) => {
-      const btnToOpenAdditionalInfo = document.createElement("button");
-      btnToOpenAdditionalInfo.classList.add("toOpenAdditionalInfo");
-      btnToOpenAdditionalInfo.innerHTML = `<img src="imgs/exclamation-mark.png"/>`;
-
-      card.appendChild(btnToOpenAdditionalInfo);
-
       const aboutTheCoach = card.querySelector(".card_aboutTheCoach");
-      if (card.contains(btnToOpenAdditionalInfo)) {
-        btnToOpenAdditionalInfo.onclick = () => {
-          aboutTheCoach.classList.toggle("active");
-        };
-      }
+      card.onclick = () => {
+        aboutTheCoach.classList.toggle("active");
+      };
 
       if (aboutTheCoach) {
         if (card.classList.contains("swiper-slide-active")) {

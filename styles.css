@@ -1192,6 +1192,7 @@ main .main_wrapperOurPasses .main_passes .swiper-wrapper .swiper-slide .card_mod
 }
 main .main_wrapperOurPasses .swiper-passes {
   width: 90%;
+  height: 600px;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1214,6 +1215,7 @@ main .main_wrapperOurPasses .swiper-passes .swiper-wrapper {
       -ms-flex-align: stretch;
           align-items: stretch;
   width: 100%;
+  height: 100%;
   z-index: 1;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
@@ -1240,7 +1242,8 @@ main .main_wrapperOurPasses .swiper-passes .swiper-wrapper .swiper-slide {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border: 5px solid #1a1a1a;
-  min-height: 400px;
+  min-height: 350px;
+  height: 500px;
   position: relative;
   margin-right: 13px;
   -webkit-user-select: none;

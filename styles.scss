@@ -1067,6 +1067,7 @@ main {
 
     .swiper-passes {
       width: 90%;
+      height: 600px;
       display: none;
       flex-direction: column;
       align-items: center;
@@ -1078,6 +1079,7 @@ main {
         display: flex;
         align-items: stretch;
         width: 100%;
+        height: 100%;
         z-index: 1;
         transition-property: transform;
         box-sizing: content-box;
@@ -1092,7 +1094,8 @@ main {
           flex-direction: column;
           justify-content: space-between;
           border: 5px solid #1a1a1a;
-          min-height: 400px;
+          min-height: 350px;
+          height: 500px;
           position: relative;
           margin-right: 13px;
           user-select: none;
