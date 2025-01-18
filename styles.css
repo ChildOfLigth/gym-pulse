@@ -966,10 +966,10 @@ main .main_wrapperOurCourses .swiper-courses .swiper-wrapper .swiper-slide .elem
   line-height: 36px;
   width: 92%;
 }
-main .main_wrapperOurCourses .swiper-courses .swiper-wrapper .swiper-slide:hover .elem_aboutCourse {
+main .main_wrapperOurCourses .swiper-courses .swiper-wrapper .swiper-slide.visible .elem_aboutCourse {
   opacity: 1;
 }
-main .main_wrapperOurCourses .swiper-courses .swiper-wrapper .swiper-slide:hover .elem_nameCourse {
+main .main_wrapperOurCourses .swiper-courses .swiper-wrapper .swiper-slide.visible .elem_nameCourse {
   max-height: 0;
 }
 main .main_wrapperOurPasses {
@@ -1247,6 +1247,7 @@ main .main_wrapperOurPasses .swiper-passes .swiper-wrapper .swiper-slide {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  z-index: 1000 !important;
 }
 main .main_wrapperOurPasses .swiper-passes .swiper-wrapper .swiper-slide .card_name {
   width: 100%;
@@ -1344,7 +1345,7 @@ main .main_wrapperOurPasses .swiper-passes .swiper-wrapper .swiper-slide .card_m
   height: auto;
   padding: 30px;
   background-color: white;
-  z-index: 1000;
+  z-index: 10000 !important;
   border-radius: 5px;
   -webkit-box-shadow: -5px 5px 10px #1a1a1a;
           box-shadow: -5px 5px 10px #1a1a1a;
@@ -1377,6 +1378,9 @@ main .main_wrapperOurPasses .swiper-passes .swiper-wrapper .swiper-slide .card_m
   position: absolute;
   left: 0;
   top: 3px;
+}
+main .main_wrapperOurPasses .swiper-passes .swiper-pagination {
+  z-index: 10 !important;
 }
 main .main_contactsAndschedule {
   width: 60%;
@@ -2014,8 +2018,8 @@ footer .footer_content .content_listPageNavigation li a:hover {
 @media (max-width: 360px) {
   .main_wrapperOurTrainers .swiper-trainers .swiper-wrapper .swiper-slide .toOpenAdditionalInfo {
     top: 13px;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 }
 @media (max-width: 320px) {

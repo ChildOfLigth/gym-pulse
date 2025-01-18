@@ -107,6 +107,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
     const buttonDetails = card.querySelector(".card_buttonDetails");
     const closeModalWindow = card.querySelector(".closeModalWindow");
+    const swiperPasses = document.querySelector(".swiper-passes");
+    const pagination = swiperPasses.querySelector(".swiper-pagination");
 
     if (buttonDetails) {
       buttonDetails.onclick = () => {
@@ -123,6 +125,7 @@ window.addEventListener("DOMContentLoaded", function () {
         } else {
           modalWindowWithFeatureList.style.display = "block";
           currentlyOpenModal = modalWindowWithFeatureList;
+          pagination.style.opacity = 0;
         }
       };
     }
@@ -130,6 +133,7 @@ window.addEventListener("DOMContentLoaded", function () {
     if (closeModalWindow) {
       closeModalWindow.onclick = () => {
         modalWindowWithFeatureList.style.display = "none";
+        pagination.style.opacity = 1;
       };
     }
   });
@@ -160,4 +164,12 @@ window.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  const swiperCourses = document.querySelector(".swiper-courses");
+  const swiperSlide = swiperCourses.querySelectorAll(".swiper-slide");
+  swiperSlide.forEach((card) => {
+    card.onclick = () => {
+      card.classList.toggle("visible");
+    };
+  });
 });

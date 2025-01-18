@@ -847,7 +847,7 @@ main {
             }
           }
 
-          &:hover {
+          &.visible {
             .elem_aboutCourse {
               opacity: 1;
             }
@@ -1073,6 +1073,7 @@ main {
       justify-content: center;
       position: relative;
       margin: 0 auto;
+
       .swiper-wrapper {
         display: flex;
         align-items: stretch;
@@ -1082,6 +1083,7 @@ main {
         box-sizing: content-box;
         transform: translate3d(0px, 0, 0);
         margin: 50px auto 0 auto;
+
         .swiper-slide {
           width: 100%;
           background-color: white;
@@ -1094,6 +1096,7 @@ main {
           position: relative;
           margin-right: 13px;
           user-select: none;
+          z-index: 1000 !important;
 
           .card_name {
             width: 100%;
@@ -1196,7 +1199,7 @@ main {
             height: auto;
             padding: 30px;
             background-color: white;
-            z-index: 1000;
+            z-index: 10000 !important;
             border-radius: 5px;
             box-shadow: -5px 5px 10px #1a1a1a;
 
@@ -1235,6 +1238,10 @@ main {
             }
           }
         }
+      }
+
+      .swiper-pagination {
+        z-index: 10 !important;
       }
     }
   }
@@ -2074,8 +2081,8 @@ footer {
         .swiper-slide {
           .toOpenAdditionalInfo {
             top: 13px;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
           }
         }
       }
